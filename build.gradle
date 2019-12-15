@@ -1,0 +1,28 @@
+plugins {
+    id "idea"
+}
+
+allprojects {
+    group "nl.santa"
+    version "1.0-SNAPSHOT"
+
+    apply plugin: 'idea'
+    apply plugin: 'java'
+    apply plugin: 'antlr'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        antlr "org.antlr:antlr4:4.7.1"
+    }
+}
+
+wrapper {
+    distributionType = Wrapper.DistributionType.ALL
+}

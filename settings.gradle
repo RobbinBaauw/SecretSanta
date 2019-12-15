@@ -1,2 +1,6 @@
-rootProject.name = 'santa'
+rootProject.name = "santa"
+
+include "grammar"
+include "interpreter"
+include "intellij"
 

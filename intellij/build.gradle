@@ -1,0 +1,25 @@
+plugins {
+    id "org.jetbrains.intellij" version "0.4.15"
+}
+
+intellij {
+    version = ideaVersion
+
+    pluginName 'santa-language-plugin'
+    downloadSources true
+    updateSinceUntilBuild false
+}
+
+dependencies {
+    compile project(':grammar')
+
+    antlr("org.antlr:antlr4:4.7.1") {
+        exclude group:'com.ibm.icu', module:'icu4j'
+    }
+
+    implementation 'org.antlr:antlr4-intellij-adaptor:0.1'
+}
+
+generateGrammarSource {
+    arguments += ["-package", "nl.santa.grammar", "-Xexact-output-dir"]
+}

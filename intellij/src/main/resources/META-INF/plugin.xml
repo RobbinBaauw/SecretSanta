@@ -1,0 +1,46 @@
+<idea-plugin version="2">
+	<id>nl.santa.intellij</id>
+	<name>Santa Jetbrains Plugin</name>
+	<version>0.1</version>
+
+	<description>Santa Language Support for Intellij</description>
+
+	<!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
+	<idea-version since-build="133"/> <!-- requires 13.x, 14.x, 15.x -->
+
+	<!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+		 on how to target different products -->
+	<!-- uncomment to enable plugin in all products -->
+	<depends>com.intellij.modules.lang</depends>
+
+	<application-components>
+	</application-components>
+
+	<project-components>
+		<component>
+			<implementation-class>nl.santa.intellij.SamplePluginController</implementation-class>
+		</component>
+	</project-components>
+
+	<actions>
+	</actions>
+
+	<extensions defaultExtensionNs="com.intellij">
+		<fileTypeFactory implementation="nl.santa.intellij.SampleFileTypeFactory"/>
+		<lang.syntaxHighlighterFactory key="Sample"
+									   implementationClass="nl.santa.intellij.SampleSyntaxHighlighterFactory"/>
+
+		<lang.parserDefinition language="Sample" implementationClass="nl.santa.intellij.SampleParserDefinition"/>
+		<lang.ast.factory language="Sample" implementationClass="nl.santa.intellij.SampleASTFactory"/>
+
+		<lang.psiStructureViewFactory language="Sample"
+									  implementationClass="nl.santa.intellij.structview.SampleStructureViewFactory"/>
+
+		<colorSettingsPage implementation="nl.santa.intellij.SampleColorSettingsPage"/>
+
+		<externalAnnotator language="Sample" implementationClass="nl.santa.intellij.SampleExternalAnnotator"/>
+
+		<lang.findUsagesProvider language="Sample"
+								 implementationClass="nl.santa.intellij.SampleFindUsagesProvider"/>
+	</extensions>
+</idea-plugin>

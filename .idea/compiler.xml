@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="intellij.main" target="1.8" />
+      <module name="intellij.test" target="11" />
+      <module name="root.grammar.main" target="1.8" />
+      <module name="root.grammar.test" target="1.8" />
+      <module name="root.intellij.main" target="1.8" />
+      <module name="root.intellij.test" target="11" />
+      <module name="root.interpreter.main" target="1.8" />
+      <module name="root.interpreter.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
