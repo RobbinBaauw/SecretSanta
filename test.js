@@ -1,5 +1,10 @@
-let inputStream = new antlr4.InputStream("text");
-let lexer = new JavaScriptLexer(inputStream);
-let tokenStream = new antlr4.CommonTokenStream(lexer);
-let parser = new JavaScriptParser(tokenStream);
-parser.buildParseTrees = true;
+var a, x, y;
+var r = 10;
+
+with (Math) {
+    a = PI * r * r;
+    x = r * cos(PI);
+    y = r * sin(PI / 2);
+}
+
+console.log(a);

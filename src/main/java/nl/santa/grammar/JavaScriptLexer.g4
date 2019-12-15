@@ -30,6 +30,10 @@
  */
 lexer grammar JavaScriptLexer;
 
+@lexer::header {
+    package nl.santa.grammar;
+}
+
 channels { ERROR }
 
 options { superClass=JavaScriptBaseLexer; }

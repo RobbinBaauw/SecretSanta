@@ -30,6 +30,10 @@
  */
 parser grammar JavaScriptParser;
 
+@header {
+    package nl.santa.grammar;
+}
+
 options {
     tokenVocab=JavaScriptLexer;
     superClass=JavaScriptBaseParser;
