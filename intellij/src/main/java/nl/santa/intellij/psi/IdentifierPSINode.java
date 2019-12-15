@@ -13,10 +13,7 @@ import nl.santa.intellij.SantaLangParserDefinition;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 
-import static org.antlr.jetbrains.sample.parser.SampleLanguageParser.RULE_call_expr;
-import static org.antlr.jetbrains.sample.parser.SampleLanguageParser.RULE_expr;
-import static org.antlr.jetbrains.sample.parser.SampleLanguageParser.RULE_primary;
-import static org.antlr.jetbrains.sample.parser.SampleLanguageParser.RULE_statement;
+import static nl.santa.grammar.SantaLangParser.*;
 
 /** From doc: "Every element which can be renamed or referenced
  *             needs to implement com.intellij.psi.PsiNamedElement interface."
@@ -103,10 +100,9 @@ public class IdentifierPSINode extends ANTLRPsiLeafNode implements PsiNamedEleme
 		if ( elType instanceof RuleIElementType ) {
 			switch ( ((RuleIElementType) elType).getRuleIndex() ) {
 				case RULE_statement :
-				case RULE_expr :
-				case RULE_primary :
+				case RULE_expressionSequence :
 					return new VariableRef(this);
-				case RULE_call_expr :
+				case RULE_functionDeclaration :
 					return new FunctionRef(this);
 			}
 		}

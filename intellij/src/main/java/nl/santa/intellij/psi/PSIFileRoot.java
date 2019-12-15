@@ -28,7 +28,7 @@ public class PSIFileRoot extends PsiFileBase implements ScopeNode {
 
     @Override
     public String toString() {
-        return "Sample Language file";
+        return "Santa Language file";
     }
 
     @Override

@@ -69,6 +69,6 @@ public class SantaLangColorSettingsPage implements ColorSettingsPage {
 	@NotNull
 	@Override
 	public String getDisplayName() {
-		return "Sample";
+		return "Santa Lang";
 	}
 }

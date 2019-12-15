@@ -12,14 +12,14 @@ import com.intellij.psi.PsiFile;
 import com.intellij.psi.tree.IElementType;
 import com.intellij.psi.tree.IFileElementType;
 import com.intellij.psi.tree.TokenSet;
+import nl.santa.grammar.SantaLangLexer;
+import nl.santa.grammar.SantaLangParser;
 import org.antlr.intellij.adaptor.lexer.ANTLRLexerAdaptor;
 import org.antlr.intellij.adaptor.lexer.PSIElementTypeFactory;
 import org.antlr.intellij.adaptor.lexer.RuleIElementType;
 import org.antlr.intellij.adaptor.lexer.TokenIElementType;
 import org.antlr.intellij.adaptor.parser.ANTLRParserAdaptor;
 import org.antlr.intellij.adaptor.psi.ANTLRPsiNode;
-import org.antlr.jetbrains.sample.parser.SampleLanguageLexer;
-import org.antlr.jetbrains.sample.parser.SampleLanguageParser;
 import nl.santa.intellij.psi.ArgdefSubtree;
 import nl.santa.intellij.psi.BlockSubtree;
 import nl.santa.intellij.psi.CallSubtree;
@@ -40,48 +40,48 @@ public class SantaLangParserDefinition implements ParserDefinition {
 
 	static {
 		PSIElementTypeFactory.defineLanguageIElementTypes(SantaLangLanguage.INSTANCE,
-		                                                  SampleLanguageParser.tokenNames,
-		                                                  SampleLanguageParser.ruleNames);
+		                                                  SantaLangParser.tokenNames,
+		                                                  SantaLangParser.ruleNames);
 		List<TokenIElementType> tokenIElementTypes =
 			PSIElementTypeFactory.getTokenIElementTypes(SantaLangLanguage.INSTANCE);
-		ID = tokenIElementTypes.get(SampleLanguageLexer.ID);
+		ID = tokenIElementTypes.get(SantaLangLexer.Identifier);
 	}
 
 	public static final TokenSet COMMENTS =
 		PSIElementTypeFactory.createTokenSet(
 			SantaLangLanguage.INSTANCE,
-			SampleLanguageLexer.COMMENT,
-			SampleLanguageLexer.LINE_COMMENT);
+			SantaLangLexer.SingleLineComment,
+			SantaLangLexer.MultiLineComment);
 
 	public static final TokenSet WHITESPACE =
 		PSIElementTypeFactory.createTokenSet(
 			SantaLangLanguage.INSTANCE,
-			SampleLanguageLexer.WS);
+			SantaLangLexer.WhiteSpaces);
 
 	public static final TokenSet STRING =
 		PSIElementTypeFactory.createTokenSet(
 			SantaLangLanguage.INSTANCE,
-			SampleLanguageLexer.STRING);
+			SantaLangLexer.StringLiteral);
 
 	@NotNull
 	@Override
 	public Lexer createLexer(Project project) {
-		SampleLanguageLexer lexer = new SampleLanguageLexer(null);
+		SantaLangLexer lexer = new SantaLangLexer(null);
 		return new ANTLRLexerAdaptor(SantaLangLanguage.INSTANCE, lexer);
 	}
 
 	@NotNull
 	public PsiParser createParser(final Project project) {
-		final SampleLanguageParser parser = new SampleLanguageParser(null);
+		final SantaLangParser parser = new SantaLangParser(null);
 		return new ANTLRParserAdaptor(SantaLangLanguage.INSTANCE, parser) {
 			@Override
 			protected ParseTree parse(Parser parser, IElementType root) {
 				// start rule depends on root passed in; sometimes we want to create an ID node etc...
 				if ( root instanceof IFileElementType ) {
-					return ((SampleLanguageParser) parser).script();
+					return ((SantaLangParser) parser).program();
 				}
 				// let's hope it's an ID as needed by "rename function"
-				return ((SampleLanguageParser) parser).primary();
+				return ((SantaLangParser) parser).program();
 			}
 		};
 	}
@@ -161,15 +161,15 @@ public class SantaLangParserDefinition implements ParserDefinition {
 		}
 		RuleIElementType ruleElType = (RuleIElementType) elType;
 		switch ( ruleElType.getRuleIndex() ) {
-			case SampleLanguageParser.RULE_function :
+			case SantaLangParser.RULE_functionBody :
 				return new FunctionSubtree(node, elType);
-			case SampleLanguageParser.RULE_vardef :
+			case SantaLangParser.RULE_variableDeclaration :
 				return new VardefSubtree(node, elType);
-			case SampleLanguageParser.RULE_formal_arg :
+			case SantaLangParser.RULE_formalParameterArg :
 				return new ArgdefSubtree(node, elType);
-			case SampleLanguageParser.RULE_block :
+			case SantaLangParser.RULE_block :
 				return new BlockSubtree(node);
-			case SampleLanguageParser.RULE_call_expr :
+			case SantaLangParser.RULE_expressionStatement :
 				return new CallSubtree(node);
 			default :
 				return new ANTLRPsiNode(node);

@@ -4,6 +4,7 @@
 	<version>0.1</version>
 
 	<description>Santa Language Support for Intellij</description>
+	<vendor>Santa</vendor>
 
 	<!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
 	<idea-version since-build="133"/> <!-- requires 13.x, 14.x, 15.x -->
@@ -27,20 +28,20 @@
 
 	<extensions defaultExtensionNs="com.intellij">
 		<fileTypeFactory implementation="nl.santa.intellij.SantaLangFileTypeFactory"/>
-		<lang.syntaxHighlighterFactory key="Sample"
+		<lang.syntaxHighlighterFactory language="SantaLang"
 									   implementationClass="nl.santa.intellij.SantaLangSyntaxHighlighterFactory"/>
 
-		<lang.parserDefinition language="Sample" implementationClass="nl.santa.intellij.SantaLangParserDefinition"/>
-		<lang.ast.factory language="Sample" implementationClass="nl.santa.intellij.SantaLangASTFactory"/>
+		<lang.parserDefinition language="SantaLang" implementationClass="nl.santa.intellij.SantaLangParserDefinition"/>
+		<lang.ast.factory language="SantaLang" implementationClass="nl.santa.intellij.SantaLangASTFactory"/>
 
-		<lang.psiStructureViewFactory language="Sample"
+		<lang.psiStructureViewFactory language="SantaLang"
 									  implementationClass="nl.santa.intellij.structview.StructureViewFactory"/>
 
 		<colorSettingsPage implementation="nl.santa.intellij.SantaLangColorSettingsPage"/>
 
-		<externalAnnotator language="Sample" implementationClass="nl.santa.intellij.SantaLangExternalAnnotator"/>
+		<externalAnnotator language="SantaLang" implementationClass="nl.santa.intellij.SantaLangExternalAnnotator"/>
 
-		<lang.findUsagesProvider language="Sample"
+		<lang.findUsagesProvider language="SantaLang"
 								 implementationClass="nl.santa.intellij.SantaLangFindUsagesProvider"/>
 	</extensions>
 </idea-plugin>

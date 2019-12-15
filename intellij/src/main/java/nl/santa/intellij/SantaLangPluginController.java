@@ -10,8 +10,8 @@ import com.intellij.openapi.util.SystemInfo;
 import org.jetbrains.annotations.NotNull;
 
 public class SantaLangPluginController implements ProjectComponent {
-	public static final String PLUGIN_ID = "org.antlr.jetbrains.sample";
-	public static final Logger LOG = Logger.getInstance("SamplePluginController");
+	public static final String PLUGIN_ID = "nl.santa.intellij";
+	public static final Logger LOG = Logger.getInstance("SantaLangPluginController");
 
 	public Project project;
 	public boolean projectIsClosed = false;
@@ -35,7 +35,7 @@ public class SantaLangPluginController implements ProjectComponent {
 		if ( plugin!=null ) {
 			version = plugin.getVersion();
 		}
-		LOG.info("Sample Plugin version "+version+", Java version "+ SystemInfo.JAVA_VERSION);
+		LOG.info("Santa Plugin version "+version+", Java version "+ SystemInfo.JAVA_VERSION);
 	}
 
 	@Override
@@ -47,6 +47,6 @@ public class SantaLangPluginController implements ProjectComponent {
 	@NotNull
 	@Override
 	public String getComponentName() {
-		return "sample.ProjectComponent";
+		return "santaLang.ProjectComponent";
 	}
 }

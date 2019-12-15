@@ -7,7 +7,7 @@ import org.jetbrains.annotations.Nullable;
 import javax.swing.*;
 
 public class SantaLangFileType extends LanguageFileType {
-	public static final String FILE_EXTENSION = "sample";
+	public static final String FILE_EXTENSION = "santa";
 		public static final SantaLangFileType INSTANCE = new SantaLangFileType();
 
 	protected SantaLangFileType() {

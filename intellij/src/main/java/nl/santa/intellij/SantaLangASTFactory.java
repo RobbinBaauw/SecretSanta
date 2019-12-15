@@ -7,8 +7,8 @@ import com.intellij.psi.impl.source.tree.LeafElement;
 import com.intellij.psi.impl.source.tree.LeafPsiElement;
 import com.intellij.psi.impl.source.tree.PsiCoreCommentImpl;
 import com.intellij.psi.tree.IElementType;
+import nl.santa.grammar.SantaLangLexer;
 import org.antlr.intellij.adaptor.lexer.TokenIElementType;
-import org.antlr.jetbrains.sample.parser.SampleLanguageLexer;
 import nl.santa.intellij.psi.IdentifierPSINode;
 import org.jetbrains.annotations.NotNull;
 
@@ -38,7 +38,7 @@ public class SantaLangASTFactory extends CoreASTFactory {
 	@Override
 	public LeafElement createLeaf(@NotNull IElementType type, CharSequence text) {
 		if ( type instanceof TokenIElementType &&
-			 ((TokenIElementType) type).getANTLRTokenType()==SampleLanguageLexer.ID)
+			 ((TokenIElementType) type).getANTLRTokenType()== SantaLangLexer.Identifier)
 		{
 			// found an ID node; here we do not distinguish between definitions and references
 			// because we have no context information here. All we know is that

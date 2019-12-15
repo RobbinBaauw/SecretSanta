@@ -11,13 +11,7 @@ import nl.santa.intellij.psi.VardefSubtree;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import static org.antlr.jetbrains.sample.parser.SampleLanguageParser.RULE_call_expr;
-import static org.antlr.jetbrains.sample.parser.SampleLanguageParser.RULE_expr;
-import static org.antlr.jetbrains.sample.parser.SampleLanguageParser.RULE_formal_arg;
-import static org.antlr.jetbrains.sample.parser.SampleLanguageParser.RULE_function;
-import static org.antlr.jetbrains.sample.parser.SampleLanguageParser.RULE_primary;
-import static org.antlr.jetbrains.sample.parser.SampleLanguageParser.RULE_statement;
-import static org.antlr.jetbrains.sample.parser.SampleLanguageParser.RULE_vardef;
+import static nl.santa.grammar.SantaLangParser.*;
 
 public class SantaLangFindUsagesProvider implements FindUsagesProvider {
 	/** Is "find usages" meaningful for a kind of definition subtree? */
@@ -49,16 +43,15 @@ public class SantaLangFindUsagesProvider implements FindUsagesProvider {
 		ANTLRPsiNode parent = (ANTLRPsiNode)element.getParent();
 		RuleIElementType elType = (RuleIElementType)parent.getNode().getElementType();
 		switch ( elType.getRuleIndex() ) {
-			case RULE_function :
-			case RULE_call_expr :
+			case RULE_arrowFunctionParameters :
 				return "function";
-			case RULE_vardef :
+			case RULE_variableStatement :
 				return "variable";
-			case RULE_formal_arg :
+			case RULE_formalParameterArg :
 				return "parameter";
 			case RULE_statement :
-			case RULE_expr :
-			case RULE_primary :
+			case RULE_expressionSequence :
+			case RULE_variableDeclaration :
 				return "variable";
 		}
 		return "";

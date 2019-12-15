@@ -36,15 +36,15 @@ import static com.intellij.openapi.editor.colors.TextAttributesKey.createTextAtt
 public class SantaLangSyntaxHighlighter extends SyntaxHighlighterBase {
 	private static final TextAttributesKey[] EMPTY_KEYS = new TextAttributesKey[0];
 	public static final TextAttributesKey ID =
-		createTextAttributesKey("SAMPLE_ID", DefaultLanguageHighlighterColors.IDENTIFIER);
+		createTextAttributesKey("SANTA_LANG_ID", DefaultLanguageHighlighterColors.IDENTIFIER);
 	public static final TextAttributesKey KEYWORD =
-		createTextAttributesKey("SAMPLE_KEYWORD", DefaultLanguageHighlighterColors.KEYWORD);
+		createTextAttributesKey("SANTA_LANG_KEYWORD", DefaultLanguageHighlighterColors.KEYWORD);
 	public static final TextAttributesKey STRING =
-		createTextAttributesKey("SAMPLE_STRING", DefaultLanguageHighlighterColors.STRING);
+		createTextAttributesKey("SANTA_LANG_STRING", DefaultLanguageHighlighterColors.STRING);
 	public static final TextAttributesKey LINE_COMMENT =
-		createTextAttributesKey("SAMPLE_LINE_COMMENT", DefaultLanguageHighlighterColors.LINE_COMMENT);
+		createTextAttributesKey("SANTA_LANG_LINE_COMMENT", DefaultLanguageHighlighterColors.LINE_COMMENT);
 	public static final TextAttributesKey BLOCK_COMMENT =
-		createTextAttributesKey("SAMPLE_BLOCK_COMMENT", DefaultLanguageHighlighterColors.BLOCK_COMMENT);
+		createTextAttributesKey("SANTA_LANG_BLOCK_COMMENT", DefaultLanguageHighlighterColors.BLOCK_COMMENT);
 
 	static {
 		PSIElementTypeFactory.defineLanguageIElementTypes(SantaLangLanguage.INSTANCE,

@@ -1,7 +1,6 @@
 package nl.santa.intellij.structview;
 
 import com.intellij.lang.ASTNode;
-import com.intellij.navigation.ItemPresentation;
 import com.intellij.psi.PsiElement;
 import nl.santa.intellij.Icons;
 import org.jetbrains.annotations.Nullable;

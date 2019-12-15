@@ -6,6 +6,6 @@ public class SantaLangLanguage extends Language {
     public static final SantaLangLanguage INSTANCE = new SantaLangLanguage();
 
     private SantaLangLanguage() {
-        super("Sample");
+        super("SantaLang");
     }
 }
