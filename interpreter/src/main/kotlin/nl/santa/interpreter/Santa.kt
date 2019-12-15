@@ -1,7 +1,7 @@
 package nl.santa.interpreter
 
-import nl.santa.grammar.JavaScriptLexer
-import nl.santa.grammar.JavaScriptParser
+import nl.santa.grammar.SantaLangLexer
+import nl.santa.grammar.SantaLangParser
 import org.antlr.v4.runtime.CharStreams
 import org.antlr.v4.runtime.CommonTokenStream
 import org.graalvm.polyglot.Context
@@ -11,11 +11,11 @@ fun main(args: Array<String>) {
     val fileName = parseCLI(args)
     val fileStream = CharStreams.fromFileName(fileName)
 
-    val lexer = JavaScriptLexer(fileStream)
+    val lexer = SantaLangLexer(fileStream)
     val tokenStream = CommonTokenStream(lexer)
     val code = parseCode(tokenStream)
 
-    val parser = JavaScriptParser(tokenStream)
+    val parser = SantaLangParser(tokenStream)
     parser.removeErrorListeners()
     parser.addErrorListener(ErrorListener)
     parser.buildParseTree = true
@@ -27,7 +27,7 @@ fun main(args: Array<String>) {
     }
 }
 
-fun hasSyntaxErrors(parser: JavaScriptParser): Boolean {
+fun hasSyntaxErrors(parser: SantaLangParser): Boolean {
     return try {
         parser.program()
         false

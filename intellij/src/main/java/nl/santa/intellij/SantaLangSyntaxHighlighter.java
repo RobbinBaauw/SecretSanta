@@ -5,11 +5,11 @@ import com.intellij.openapi.editor.DefaultLanguageHighlighterColors;
 import com.intellij.openapi.editor.colors.TextAttributesKey;
 import com.intellij.openapi.fileTypes.SyntaxHighlighterBase;
 import com.intellij.psi.tree.IElementType;
+import nl.santa.grammar.SantaLangLexer;
+import nl.santa.grammar.SantaLangParser;
 import org.antlr.intellij.adaptor.lexer.ANTLRLexerAdaptor;
 import org.antlr.intellij.adaptor.lexer.PSIElementTypeFactory;
 import org.antlr.intellij.adaptor.lexer.TokenIElementType;
-import org.antlr.jetbrains.sample.parser.SampleLanguageLexer;
-import org.antlr.jetbrains.sample.parser.SampleLanguageParser;
 import org.jetbrains.annotations.NotNull;
 import static com.intellij.openapi.editor.colors.TextAttributesKey.createTextAttributesKey;
 
@@ -33,7 +33,7 @@ import static com.intellij.openapi.editor.colors.TextAttributesKey.createTextAtt
  * For highlighting lexer errors, the standard TextAttributesKey
  * for bad characters HighlighterColors.BAD_CHARACTER can be used."
  */
-public class SampleSyntaxHighlighter extends SyntaxHighlighterBase {
+public class SantaLangSyntaxHighlighter extends SyntaxHighlighterBase {
 	private static final TextAttributesKey[] EMPTY_KEYS = new TextAttributesKey[0];
 	public static final TextAttributesKey ID =
 		createTextAttributesKey("SAMPLE_ID", DefaultLanguageHighlighterColors.IDENTIFIER);
@@ -47,16 +47,16 @@ public class SampleSyntaxHighlighter extends SyntaxHighlighterBase {
 		createTextAttributesKey("SAMPLE_BLOCK_COMMENT", DefaultLanguageHighlighterColors.BLOCK_COMMENT);
 
 	static {
-		PSIElementTypeFactory.defineLanguageIElementTypes(SampleLanguage.INSTANCE,
-		                                                  SampleLanguageParser.tokenNames,
-		                                                  SampleLanguageParser.ruleNames);
+		PSIElementTypeFactory.defineLanguageIElementTypes(SantaLangLanguage.INSTANCE,
+		                                                  SantaLangParser.tokenNames,
+		                                                  SantaLangParser.ruleNames);
 	}
 
 	@NotNull
 	@Override
 	public Lexer getHighlightingLexer() {
-		SampleLanguageLexer lexer = new SampleLanguageLexer(null);
-		return new ANTLRLexerAdaptor(SampleLanguage.INSTANCE, lexer);
+		SantaLangLexer lexer = new SantaLangLexer(null);
+		return new ANTLRLexerAdaptor(SantaLangLanguage.INSTANCE, lexer);
 	}
 
 	@NotNull
@@ -67,31 +67,31 @@ public class SampleSyntaxHighlighter extends SyntaxHighlighterBase {
 		int ttype = myType.getANTLRTokenType();
 		TextAttributesKey attrKey;
 		switch ( ttype ) {
-			case SampleLanguageLexer.ID :
-				attrKey = ID;
-				break;
-			case SampleLanguageLexer.VAR :
-			case SampleLanguageLexer.WHILE :
-			case SampleLanguageLexer.IF :
-			case SampleLanguageLexer.ELSE :
-			case SampleLanguageLexer.RETURN :
-			case SampleLanguageLexer.PRINT :
-			case SampleLanguageLexer.FUNC :
-			case SampleLanguageLexer.TYPEINT :
-			case SampleLanguageLexer.TYPEFLOAT :
-			case SampleLanguageLexer.TYPESTRING :
-			case SampleLanguageLexer.TYPEBOOLEAN :
-			case SampleLanguageLexer.TRUE :
-			case SampleLanguageLexer.FALSE :
+			case SantaLangLexer.Var :
+			case SantaLangLexer.While :
+			case SantaLangLexer.If :
+			case SantaLangLexer.Else :
+			case SantaLangLexer.Return :
+			case SantaLangLexer.For :
+			case SantaLangLexer.Function :
+			case SantaLangLexer.Case :
+			case SantaLangLexer.Try :
+			case SantaLangLexer.Catch :
+			case SantaLangLexer.Export :
+			case SantaLangLexer.Yield :
+			case SantaLangLexer.BooleanLiteral :
 				attrKey = KEYWORD;
 				break;
-			case SampleLanguageLexer.STRING :
+			case SantaLangLexer.StringLiteral :
+			case SantaLangLexer.TemplateStringLiteral :
 				attrKey = STRING;
 				break;
-			case SampleLanguageLexer.COMMENT :
+			case SantaLangLexer.SingleLineComment :
 				attrKey = LINE_COMMENT;
 				break;
-			case SampleLanguageLexer.LINE_COMMENT :
+			case SantaLangLexer.CDataComment :
+			case SantaLangLexer.HtmlComment :
+			case SantaLangLexer.MultiLineComment :
 				attrKey = BLOCK_COMMENT;
 				break;
 			default :

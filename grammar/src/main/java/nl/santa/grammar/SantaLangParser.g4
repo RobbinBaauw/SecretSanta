@@ -28,15 +28,15 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  * OTHER DEALINGS IN THE SOFTWARE.
  */
-parser grammar JavaScriptParser;
+parser grammar SantaLangParser;
 
 @header {
     package nl.santa.grammar;
 }
 
 options {
-    tokenVocab=JavaScriptLexer;
-    superClass=JavaScriptBaseParser;
+    tokenVocab=SantaLangLexer;
+    superClass=SantaLangBaseParser;
 }
 
 program

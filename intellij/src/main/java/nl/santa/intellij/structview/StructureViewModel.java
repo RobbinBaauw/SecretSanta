@@ -4,15 +4,15 @@ import com.intellij.ide.structureView.StructureViewModel;
 import com.intellij.ide.structureView.StructureViewModelBase;
 import com.intellij.ide.structureView.StructureViewTreeElement;
 import com.intellij.ide.util.treeView.smartTree.Sorter;
-import nl.santa.intellij.psi.SamplePSIFileRoot;
+import nl.santa.intellij.psi.PSIFileRoot;
 import org.jetbrains.annotations.NotNull;
 
-public class SampleStructureViewModel
+public class StructureViewModel
 	extends StructureViewModelBase
-	implements StructureViewModel.ElementInfoProvider
+	implements com.intellij.ide.structureView.StructureViewModel.ElementInfoProvider
 {
-	public SampleStructureViewModel(SamplePSIFileRoot root) {
-		super(root, new SampleStructureViewRootElement(root));
+	public StructureViewModel(PSIFileRoot root) {
+		super(root, new StructureViewRootElement(root));
 	}
 
 	@NotNull
@@ -28,6 +28,6 @@ public class SampleStructureViewModel
 	@Override
 	public boolean isAlwaysShowsPlus(StructureViewTreeElement element) {
 		Object value = element.getValue();
-  		return value instanceof SamplePSIFileRoot;
+  		return value instanceof PSIFileRoot;
 	}
 }

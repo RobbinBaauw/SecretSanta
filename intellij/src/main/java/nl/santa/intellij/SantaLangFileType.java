@@ -6,12 +6,12 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 
-public class SampleFileType extends LanguageFileType {
+public class SantaLangFileType extends LanguageFileType {
 	public static final String FILE_EXTENSION = "sample";
-		public static final SampleFileType INSTANCE = new SampleFileType();
+		public static final SantaLangFileType INSTANCE = new SantaLangFileType();
 
-	protected SampleFileType() {
-		super(SampleLanguage.INSTANCE);
+	protected SantaLangFileType() {
+		super(SantaLangLanguage.INSTANCE);
 	}
 
 	@NotNull

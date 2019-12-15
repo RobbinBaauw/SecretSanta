@@ -20,7 +20,7 @@ import java.util.Map;
  *  analysis can be expensive, we don't want it in the GUI event loop. Jetbrains
  *  provides this external annotator mechanism to run these analyzers out of band.
  */
-public class SampleExternalAnnotator extends ExternalAnnotator<PsiFile, List<SampleExternalAnnotator.Issue>> {
+public class SantaLangExternalAnnotator extends ExternalAnnotator<PsiFile, List<SantaLangExternalAnnotator.Issue>> {
     // NOTE: can't use instance vars as only 1 instance
 
 	public static class Issue {
@@ -47,9 +47,9 @@ public class SampleExternalAnnotator extends ExternalAnnotator<PsiFile, List<Sam
 	@Override
 	public List<Issue> doAnnotate(final PsiFile file) {
 		Collection<? extends PsiElement> funcNameNodes =
-			XPath.findAll(SampleLanguage.INSTANCE, file, "/script/function/ID");
+			XPath.findAll(SantaLangLanguage.INSTANCE, file, "/script/function/ID");
 		Collection<? extends PsiElement> funcCallNameNodes =
-			XPath.findAll(SampleLanguage.INSTANCE, file, "//call_expr/ID");
+			XPath.findAll(SantaLangLanguage.INSTANCE, file, "//call_expr/ID");
 
 		Map<String, PsiElement> funcNames = Trees.toMap(funcNameNodes);
 		Map<String, PsiElement> funcCalls = Trees.toMap(funcCallNameNodes);

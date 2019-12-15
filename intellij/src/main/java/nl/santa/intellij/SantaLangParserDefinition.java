@@ -24,7 +24,7 @@ import nl.santa.intellij.psi.ArgdefSubtree;
 import nl.santa.intellij.psi.BlockSubtree;
 import nl.santa.intellij.psi.CallSubtree;
 import nl.santa.intellij.psi.FunctionSubtree;
-import nl.santa.intellij.psi.SamplePSIFileRoot;
+import nl.santa.intellij.psi.PSIFileRoot;
 import nl.santa.intellij.psi.VardefSubtree;
 import org.antlr.v4.runtime.Parser;
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -32,48 +32,48 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class SampleParserDefinition implements ParserDefinition {
+public class SantaLangParserDefinition implements ParserDefinition {
 	public static final IFileElementType FILE =
-		new IFileElementType(SampleLanguage.INSTANCE);
+		new IFileElementType(SantaLangLanguage.INSTANCE);
 
 	public static TokenIElementType ID;
 
 	static {
-		PSIElementTypeFactory.defineLanguageIElementTypes(SampleLanguage.INSTANCE,
+		PSIElementTypeFactory.defineLanguageIElementTypes(SantaLangLanguage.INSTANCE,
 		                                                  SampleLanguageParser.tokenNames,
 		                                                  SampleLanguageParser.ruleNames);
 		List<TokenIElementType> tokenIElementTypes =
-			PSIElementTypeFactory.getTokenIElementTypes(SampleLanguage.INSTANCE);
+			PSIElementTypeFactory.getTokenIElementTypes(SantaLangLanguage.INSTANCE);
 		ID = tokenIElementTypes.get(SampleLanguageLexer.ID);
 	}
 
 	public static final TokenSet COMMENTS =
 		PSIElementTypeFactory.createTokenSet(
-			SampleLanguage.INSTANCE,
+			SantaLangLanguage.INSTANCE,
 			SampleLanguageLexer.COMMENT,
 			SampleLanguageLexer.LINE_COMMENT);
 
 	public static final TokenSet WHITESPACE =
 		PSIElementTypeFactory.createTokenSet(
-			SampleLanguage.INSTANCE,
+			SantaLangLanguage.INSTANCE,
 			SampleLanguageLexer.WS);
 
 	public static final TokenSet STRING =
 		PSIElementTypeFactory.createTokenSet(
-			SampleLanguage.INSTANCE,
+			SantaLangLanguage.INSTANCE,
 			SampleLanguageLexer.STRING);
 
 	@NotNull
 	@Override
 	public Lexer createLexer(Project project) {
 		SampleLanguageLexer lexer = new SampleLanguageLexer(null);
-		return new ANTLRLexerAdaptor(SampleLanguage.INSTANCE, lexer);
+		return new ANTLRLexerAdaptor(SantaLangLanguage.INSTANCE, lexer);
 	}
 
 	@NotNull
 	public PsiParser createParser(final Project project) {
 		final SampleLanguageParser parser = new SampleLanguageParser(null);
-		return new ANTLRParserAdaptor(SampleLanguage.INSTANCE, parser) {
+		return new ANTLRParserAdaptor(SantaLangLanguage.INSTANCE, parser) {
 			@Override
 			protected ParseTree parse(Parser parser, IElementType root) {
 				// start rule depends on root passed in; sometimes we want to create an ID node etc...
@@ -127,7 +127,7 @@ public class SampleParserDefinition implements ParserDefinition {
 	 */
 	@Override
 	public PsiFile createFile(FileViewProvider viewProvider) {
-		return new SamplePSIFileRoot(viewProvider);
+		return new PSIFileRoot(viewProvider);
 	}
 
 	/** Convert from *NON-LEAF* parse node (AST they call it)

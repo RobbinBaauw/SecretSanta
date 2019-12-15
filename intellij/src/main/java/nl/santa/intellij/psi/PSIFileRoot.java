@@ -8,22 +8,22 @@ import com.intellij.psi.PsiNamedElement;
 import org.antlr.intellij.adaptor.SymtabUtils;
 import org.antlr.intellij.adaptor.psi.ScopeNode;
 import nl.santa.intellij.Icons;
-import nl.santa.intellij.SampleFileType;
-import nl.santa.intellij.SampleLanguage;
+import nl.santa.intellij.SantaLangFileType;
+import nl.santa.intellij.SantaLangLanguage;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 
-public class SamplePSIFileRoot extends PsiFileBase implements ScopeNode {
-    public SamplePSIFileRoot(@NotNull FileViewProvider viewProvider) {
-        super(viewProvider, SampleLanguage.INSTANCE);
+public class PSIFileRoot extends PsiFileBase implements ScopeNode {
+    public PSIFileRoot(@NotNull FileViewProvider viewProvider) {
+        super(viewProvider, SantaLangLanguage.INSTANCE);
     }
 
     @NotNull
     @Override
     public FileType getFileType() {
-        return SampleFileType.INSTANCE;
+        return SantaLangFileType.INSTANCE;
     }
 
     @Override
@@ -51,10 +51,10 @@ public class SamplePSIFileRoot extends PsiFileBase implements ScopeNode {
 //		                   ".resolve("+element.getName()+
 //		                   " at "+Integer.toHexString(element.hashCode())+")");
 		if ( element.getParent() instanceof CallSubtree ) {
-			return SymtabUtils.resolve(this, SampleLanguage.INSTANCE,
+			return SymtabUtils.resolve(this, SantaLangLanguage.INSTANCE,
 			                           element, "/script/function/ID");
 		}
-		return SymtabUtils.resolve(this, SampleLanguage.INSTANCE,
+		return SymtabUtils.resolve(this, SantaLangLanguage.INSTANCE,
 		                           element, "/script/vardef/ID");
 	}
 }

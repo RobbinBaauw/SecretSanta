@@ -9,14 +9,14 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.SystemInfo;
 import org.jetbrains.annotations.NotNull;
 
-public class SamplePluginController implements ProjectComponent {
+public class SantaLangPluginController implements ProjectComponent {
 	public static final String PLUGIN_ID = "org.antlr.jetbrains.sample";
 	public static final Logger LOG = Logger.getInstance("SamplePluginController");
 
 	public Project project;
 	public boolean projectIsClosed = false;
 
-	public SamplePluginController(Project project) {
+	public SantaLangPluginController(Project project) {
 		this.project = project;
 	}
 

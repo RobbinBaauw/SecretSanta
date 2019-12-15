@@ -8,7 +8,7 @@ import java.util.Stack;
  * All lexer methods that used in grammar (IsStrictMode)
  * should start with Upper Case Char similar to Lexer rules.
  */
-public abstract class JavaScriptBaseLexer extends Lexer
+public abstract class SantaLangBaseLexer extends Lexer
 {
     /**
      * Stores values of nested modes. By default mode is strict or
@@ -28,7 +28,7 @@ public abstract class JavaScriptBaseLexer extends Lexer
      */
     private boolean useStrictCurrent = false;
 
-    public JavaScriptBaseLexer(CharStream input) {
+    public SantaLangBaseLexer(CharStream input) {
         super(input);
     }
 
@@ -83,7 +83,7 @@ public abstract class JavaScriptBaseLexer extends Lexer
 
     protected void ProcessStringLiteral()
     {
-        if (lastToken == null || lastToken.getType() == JavaScriptLexer.OpenBrace)
+        if (lastToken == null || lastToken.getType() == SantaLangLexer.OpenBrace)
         {
             String text = getText();
             if (text.equals("\"use strict\"") || text.equals("'use strict'"))
@@ -108,18 +108,18 @@ public abstract class JavaScriptBaseLexer extends Lexer
         }
 
         switch (this.lastToken.getType()) {
-            case JavaScriptLexer.Identifier:
-            case JavaScriptLexer.NullLiteral:
-            case JavaScriptLexer.BooleanLiteral:
-            case JavaScriptLexer.This:
-            case JavaScriptLexer.CloseBracket:
-            case JavaScriptLexer.CloseParen:
-            case JavaScriptLexer.OctalIntegerLiteral:
-            case JavaScriptLexer.DecimalLiteral:
-            case JavaScriptLexer.HexIntegerLiteral:
-            case JavaScriptLexer.StringLiteral:
-            case JavaScriptLexer.PlusPlus:
-            case JavaScriptLexer.MinusMinus:
+            case SantaLangLexer.Identifier:
+            case SantaLangLexer.NullLiteral:
+            case SantaLangLexer.BooleanLiteral:
+            case SantaLangLexer.This:
+            case SantaLangLexer.CloseBracket:
+            case SantaLangLexer.CloseParen:
+            case SantaLangLexer.OctalIntegerLiteral:
+            case SantaLangLexer.DecimalLiteral:
+            case SantaLangLexer.HexIntegerLiteral:
+            case SantaLangLexer.StringLiteral:
+            case SantaLangLexer.PlusPlus:
+            case SantaLangLexer.MinusMinus:
                 // After any of the tokens above, no regex literal can follow.
                 return false;
             default:

@@ -18,7 +18,7 @@
 
 	<project-components>
 		<component>
-			<implementation-class>nl.santa.intellij.SamplePluginController</implementation-class>
+			<implementation-class>nl.santa.intellij.SantaLangPluginController</implementation-class>
 		</component>
 	</project-components>
 
@@ -26,21 +26,21 @@
 	</actions>
 
 	<extensions defaultExtensionNs="com.intellij">
-		<fileTypeFactory implementation="nl.santa.intellij.SampleFileTypeFactory"/>
+		<fileTypeFactory implementation="nl.santa.intellij.SantaLangFileTypeFactory"/>
 		<lang.syntaxHighlighterFactory key="Sample"
-									   implementationClass="nl.santa.intellij.SampleSyntaxHighlighterFactory"/>
+									   implementationClass="nl.santa.intellij.SantaLangSyntaxHighlighterFactory"/>
 
-		<lang.parserDefinition language="Sample" implementationClass="nl.santa.intellij.SampleParserDefinition"/>
-		<lang.ast.factory language="Sample" implementationClass="nl.santa.intellij.SampleASTFactory"/>
+		<lang.parserDefinition language="Sample" implementationClass="nl.santa.intellij.SantaLangParserDefinition"/>
+		<lang.ast.factory language="Sample" implementationClass="nl.santa.intellij.SantaLangASTFactory"/>
 
 		<lang.psiStructureViewFactory language="Sample"
-									  implementationClass="nl.santa.intellij.structview.SampleStructureViewFactory"/>
+									  implementationClass="nl.santa.intellij.structview.StructureViewFactory"/>
 
-		<colorSettingsPage implementation="nl.santa.intellij.SampleColorSettingsPage"/>
+		<colorSettingsPage implementation="nl.santa.intellij.SantaLangColorSettingsPage"/>
 
-		<externalAnnotator language="Sample" implementationClass="nl.santa.intellij.SampleExternalAnnotator"/>
+		<externalAnnotator language="Sample" implementationClass="nl.santa.intellij.SantaLangExternalAnnotator"/>
 
 		<lang.findUsagesProvider language="Sample"
-								 implementationClass="nl.santa.intellij.SampleFindUsagesProvider"/>
+								 implementationClass="nl.santa.intellij.SantaLangFindUsagesProvider"/>
 	</extensions>
 </idea-plugin>

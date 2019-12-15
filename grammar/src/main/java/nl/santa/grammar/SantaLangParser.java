@@ -1,15 +1,18 @@
-// Generated from src/main/java/nl/santa/grammar/JavaScriptParser.g4 by ANTLR 4.7.1
+// Generated from src/main/java/nl/santa/grammar/SantaLangParser.g4 by ANTLR 4.7.1
 
     package nl.santa.grammar;
 
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.misc.*;
 import org.antlr.v4.runtime.tree.*;
 import java.util.List;
+import java.util.Iterator;
+import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class JavaScriptParser extends JavaScriptBaseParser {
+public class SantaLangParser extends SantaLangBaseParser {
 	static { RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -160,7 +163,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "JavaScriptParser.g4"; }
+	public String getGrammarFileName() { return "SantaLangParser.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -171,13 +174,13 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public JavaScriptParser(TokenStream input) {
+	public SantaLangParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 	public static class ProgramContext extends ParserRuleContext {
-		public TerminalNode EOF() { return getToken(EOF, 0); }
-		public TerminalNode HashBangLine() { return getToken(JavaScriptParser.HashBangLine, 0); }
+		public TerminalNode EOF() { return getToken(SantaLangParser.EOF, 0); }
+		public TerminalNode HashBangLine() { return getToken(SantaLangParser.HashBangLine, 0); }
 		public SourceElementsContext sourceElements() {
 			return getRuleContext(SourceElementsContext.class,0);
 		}
@@ -187,11 +190,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_program; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterProgram(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterProgram(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitProgram(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitProgram(this);
 		}
 	}
 
@@ -246,11 +249,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_sourceElement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterSourceElement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterSourceElement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitSourceElement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitSourceElement(this);
 		}
 	}
 
@@ -342,11 +345,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_statement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitStatement(this);
 		}
 	}
 
@@ -520,11 +523,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_block; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterBlock(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitBlock(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitBlock(this);
 		}
 	}
 
@@ -574,11 +577,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_statementList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterStatementList(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterStatementList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitStatementList(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitStatementList(this);
 		}
 	}
 
@@ -623,7 +626,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class ImportStatementContext extends ParserRuleContext {
-		public TerminalNode Import() { return getToken(JavaScriptParser.Import, 0); }
+		public TerminalNode Import() { return getToken(SantaLangParser.Import, 0); }
 		public ImportFromBlockContext importFromBlock() {
 			return getRuleContext(ImportFromBlockContext.class,0);
 		}
@@ -633,11 +636,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_importStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterImportStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterImportStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitImportStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitImportStatement(this);
 		}
 	}
 
@@ -680,18 +683,18 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public ImportDefaultContext importDefault() {
 			return getRuleContext(ImportDefaultContext.class,0);
 		}
-		public TerminalNode StringLiteral() { return getToken(JavaScriptParser.StringLiteral, 0); }
+		public TerminalNode StringLiteral() { return getToken(SantaLangParser.StringLiteral, 0); }
 		public ImportFromBlockContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_importFromBlock; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterImportFromBlock(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterImportFromBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitImportFromBlock(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitImportFromBlock(this);
 		}
 	}
 
@@ -827,11 +830,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_moduleItems; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterModuleItems(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterModuleItems(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitModuleItems(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitModuleItems(this);
 		}
 	}
 
@@ -908,11 +911,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_importDefault; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterImportDefault(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterImportDefault(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitImportDefault(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitImportDefault(this);
 		}
 	}
 
@@ -940,7 +943,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class ImportNamespaceContext extends ParserRuleContext {
-		public TerminalNode As() { return getToken(JavaScriptParser.As, 0); }
+		public TerminalNode As() { return getToken(SantaLangParser.As, 0); }
 		public IdentifierNameContext identifierName() {
 			return getRuleContext(IdentifierNameContext.class,0);
 		}
@@ -950,11 +953,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_importNamespace; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterImportNamespace(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterImportNamespace(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitImportNamespace(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitImportNamespace(this);
 		}
 	}
 
@@ -993,19 +996,19 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class ImportFromContext extends ParserRuleContext {
-		public TerminalNode From() { return getToken(JavaScriptParser.From, 0); }
-		public TerminalNode StringLiteral() { return getToken(JavaScriptParser.StringLiteral, 0); }
+		public TerminalNode From() { return getToken(SantaLangParser.From, 0); }
+		public TerminalNode StringLiteral() { return getToken(SantaLangParser.StringLiteral, 0); }
 		public ImportFromContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_importFrom; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterImportFrom(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterImportFrom(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitImportFrom(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitImportFrom(this);
 		}
 	}
 
@@ -1039,18 +1042,18 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public IdentifierNameContext identifierName(int i) {
 			return getRuleContext(IdentifierNameContext.class,i);
 		}
-		public TerminalNode As() { return getToken(JavaScriptParser.As, 0); }
+		public TerminalNode As() { return getToken(SantaLangParser.As, 0); }
 		public AliasNameContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_aliasName; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterAliasName(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterAliasName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitAliasName(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitAliasName(this);
 		}
 	}
 
@@ -1100,8 +1103,8 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		}
 	}
 	public static class ExportDefaultDeclarationContext extends ExportStatementContext {
-		public TerminalNode Export() { return getToken(JavaScriptParser.Export, 0); }
-		public TerminalNode Default() { return getToken(JavaScriptParser.Default, 0); }
+		public TerminalNode Export() { return getToken(SantaLangParser.Export, 0); }
+		public TerminalNode Default() { return getToken(SantaLangParser.Default, 0); }
 		public SingleExpressionContext singleExpression() {
 			return getRuleContext(SingleExpressionContext.class,0);
 		}
@@ -1111,15 +1114,15 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public ExportDefaultDeclarationContext(ExportStatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterExportDefaultDeclaration(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterExportDefaultDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitExportDefaultDeclaration(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitExportDefaultDeclaration(this);
 		}
 	}
 	public static class ExportDeclarationContext extends ExportStatementContext {
-		public TerminalNode Export() { return getToken(JavaScriptParser.Export, 0); }
+		public TerminalNode Export() { return getToken(SantaLangParser.Export, 0); }
 		public EosContext eos() {
 			return getRuleContext(EosContext.class,0);
 		}
@@ -1132,11 +1135,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public ExportDeclarationContext(ExportStatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterExportDeclaration(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterExportDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitExportDeclaration(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitExportDeclaration(this);
 		}
 	}
 
@@ -1227,11 +1230,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_exportFromBlock; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterExportFromBlock(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterExportFromBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitExportFromBlock(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitExportFromBlock(this);
 		}
 	}
 
@@ -1303,11 +1306,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_declaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterDeclaration(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitDeclaration(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitDeclaration(this);
 		}
 	}
 
@@ -1373,11 +1376,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_variableStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterVariableStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterVariableStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitVariableStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitVariableStatement(this);
 		}
 	}
 
@@ -1419,11 +1422,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_variableDeclarationList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterVariableDeclarationList(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterVariableDeclarationList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitVariableDeclarationList(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitVariableDeclarationList(this);
 		}
 	}
 
@@ -1480,11 +1483,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_variableDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterVariableDeclaration(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterVariableDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitVariableDeclaration(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitVariableDeclaration(this);
 		}
 	}
 
@@ -1522,18 +1525,18 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class EmptyStatementContext extends ParserRuleContext {
-		public TerminalNode SemiColon() { return getToken(JavaScriptParser.SemiColon, 0); }
+		public TerminalNode SemiColon() { return getToken(SantaLangParser.SemiColon, 0); }
 		public EmptyStatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_emptyStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterEmptyStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterEmptyStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitEmptyStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitEmptyStatement(this);
 		}
 	}
 
@@ -1571,11 +1574,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_expressionStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterExpressionStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterExpressionStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitExpressionStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitExpressionStatement(this);
 		}
 	}
 
@@ -1605,7 +1608,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class IfStatementContext extends ParserRuleContext {
-		public TerminalNode If() { return getToken(JavaScriptParser.If, 0); }
+		public TerminalNode If() { return getToken(SantaLangParser.If, 0); }
 		public ExpressionSequenceContext expressionSequence() {
 			return getRuleContext(ExpressionSequenceContext.class,0);
 		}
@@ -1615,18 +1618,18 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public StatementContext statement(int i) {
 			return getRuleContext(StatementContext.class,i);
 		}
-		public TerminalNode Else() { return getToken(JavaScriptParser.Else, 0); }
+		public TerminalNode Else() { return getToken(SantaLangParser.Else, 0); }
 		public IfStatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_ifStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterIfStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterIfStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitIfStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitIfStatement(this);
 		}
 	}
 
@@ -1683,11 +1686,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		}
 	}
 	public static class DoStatementContext extends IterationStatementContext {
-		public TerminalNode Do() { return getToken(JavaScriptParser.Do, 0); }
+		public TerminalNode Do() { return getToken(SantaLangParser.Do, 0); }
 		public StatementContext statement() {
 			return getRuleContext(StatementContext.class,0);
 		}
-		public TerminalNode While() { return getToken(JavaScriptParser.While, 0); }
+		public TerminalNode While() { return getToken(SantaLangParser.While, 0); }
 		public ExpressionSequenceContext expressionSequence() {
 			return getRuleContext(ExpressionSequenceContext.class,0);
 		}
@@ -1697,15 +1700,15 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public DoStatementContext(IterationStatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterDoStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterDoStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitDoStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitDoStatement(this);
 		}
 	}
 	public static class WhileStatementContext extends IterationStatementContext {
-		public TerminalNode While() { return getToken(JavaScriptParser.While, 0); }
+		public TerminalNode While() { return getToken(SantaLangParser.While, 0); }
 		public ExpressionSequenceContext expressionSequence() {
 			return getRuleContext(ExpressionSequenceContext.class,0);
 		}
@@ -1715,15 +1718,15 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public WhileStatementContext(IterationStatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterWhileStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterWhileStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitWhileStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitWhileStatement(this);
 		}
 	}
 	public static class ForStatementContext extends IterationStatementContext {
-		public TerminalNode For() { return getToken(JavaScriptParser.For, 0); }
+		public TerminalNode For() { return getToken(SantaLangParser.For, 0); }
 		public StatementContext statement() {
 			return getRuleContext(StatementContext.class,0);
 		}
@@ -1739,16 +1742,16 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public ForStatementContext(IterationStatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterForStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterForStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitForStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitForStatement(this);
 		}
 	}
 	public static class ForInStatementContext extends IterationStatementContext {
-		public TerminalNode For() { return getToken(JavaScriptParser.For, 0); }
-		public TerminalNode In() { return getToken(JavaScriptParser.In, 0); }
+		public TerminalNode For() { return getToken(SantaLangParser.For, 0); }
+		public TerminalNode In() { return getToken(SantaLangParser.In, 0); }
 		public ExpressionSequenceContext expressionSequence() {
 			return getRuleContext(ExpressionSequenceContext.class,0);
 		}
@@ -1764,16 +1767,16 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public ForInStatementContext(IterationStatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterForInStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterForInStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitForInStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitForInStatement(this);
 		}
 	}
 	public static class ForOfStatementContext extends IterationStatementContext {
-		public TerminalNode For() { return getToken(JavaScriptParser.For, 0); }
-		public TerminalNode Identifier() { return getToken(JavaScriptParser.Identifier, 0); }
+		public TerminalNode For() { return getToken(SantaLangParser.For, 0); }
+		public TerminalNode Identifier() { return getToken(SantaLangParser.Identifier, 0); }
 		public ExpressionSequenceContext expressionSequence() {
 			return getRuleContext(ExpressionSequenceContext.class,0);
 		}
@@ -1786,15 +1789,15 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public VariableStatementContext variableStatement() {
 			return getRuleContext(VariableStatementContext.class,0);
 		}
-		public TerminalNode Await() { return getToken(JavaScriptParser.Await, 0); }
+		public TerminalNode Await() { return getToken(SantaLangParser.Await, 0); }
 		public ForOfStatementContext(IterationStatementContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterForOfStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterForOfStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitForOfStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitForOfStatement(this);
 		}
 	}
 
@@ -2109,20 +2112,20 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class VarModifierContext extends ParserRuleContext {
-		public TerminalNode Var() { return getToken(JavaScriptParser.Var, 0); }
-		public TerminalNode Let() { return getToken(JavaScriptParser.Let, 0); }
-		public TerminalNode Const() { return getToken(JavaScriptParser.Const, 0); }
+		public TerminalNode Var() { return getToken(SantaLangParser.Var, 0); }
+		public TerminalNode Let() { return getToken(SantaLangParser.Let, 0); }
+		public TerminalNode Const() { return getToken(SantaLangParser.Const, 0); }
 		public VarModifierContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_varModifier; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterVarModifier(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterVarModifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitVarModifier(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitVarModifier(this);
 		}
 	}
 
@@ -2157,22 +2160,22 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class ContinueStatementContext extends ParserRuleContext {
-		public TerminalNode Continue() { return getToken(JavaScriptParser.Continue, 0); }
+		public TerminalNode Continue() { return getToken(SantaLangParser.Continue, 0); }
 		public EosContext eos() {
 			return getRuleContext(EosContext.class,0);
 		}
-		public TerminalNode Identifier() { return getToken(JavaScriptParser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(SantaLangParser.Identifier, 0); }
 		public ContinueStatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_continueStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterContinueStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterContinueStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitContinueStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitContinueStatement(this);
 		}
 	}
 
@@ -2212,22 +2215,22 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class BreakStatementContext extends ParserRuleContext {
-		public TerminalNode Break() { return getToken(JavaScriptParser.Break, 0); }
+		public TerminalNode Break() { return getToken(SantaLangParser.Break, 0); }
 		public EosContext eos() {
 			return getRuleContext(EosContext.class,0);
 		}
-		public TerminalNode Identifier() { return getToken(JavaScriptParser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(SantaLangParser.Identifier, 0); }
 		public BreakStatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_breakStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterBreakStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterBreakStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitBreakStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitBreakStatement(this);
 		}
 	}
 
@@ -2267,7 +2270,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class ReturnStatementContext extends ParserRuleContext {
-		public TerminalNode Return() { return getToken(JavaScriptParser.Return, 0); }
+		public TerminalNode Return() { return getToken(SantaLangParser.Return, 0); }
 		public EosContext eos() {
 			return getRuleContext(EosContext.class,0);
 		}
@@ -2280,11 +2283,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_returnStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterReturnStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterReturnStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitReturnStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitReturnStatement(this);
 		}
 	}
 
@@ -2324,7 +2327,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class YieldStatementContext extends ParserRuleContext {
-		public TerminalNode Yield() { return getToken(JavaScriptParser.Yield, 0); }
+		public TerminalNode Yield() { return getToken(SantaLangParser.Yield, 0); }
 		public EosContext eos() {
 			return getRuleContext(EosContext.class,0);
 		}
@@ -2337,11 +2340,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_yieldStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterYieldStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterYieldStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitYieldStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitYieldStatement(this);
 		}
 	}
 
@@ -2381,7 +2384,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class WithStatementContext extends ParserRuleContext {
-		public TerminalNode With() { return getToken(JavaScriptParser.With, 0); }
+		public TerminalNode With() { return getToken(SantaLangParser.With, 0); }
 		public ExpressionSequenceContext expressionSequence() {
 			return getRuleContext(ExpressionSequenceContext.class,0);
 		}
@@ -2394,11 +2397,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_withStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterWithStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterWithStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitWithStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitWithStatement(this);
 		}
 	}
 
@@ -2432,7 +2435,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class SwitchStatementContext extends ParserRuleContext {
-		public TerminalNode Switch() { return getToken(JavaScriptParser.Switch, 0); }
+		public TerminalNode Switch() { return getToken(SantaLangParser.Switch, 0); }
 		public ExpressionSequenceContext expressionSequence() {
 			return getRuleContext(ExpressionSequenceContext.class,0);
 		}
@@ -2445,11 +2448,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_switchStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterSwitchStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterSwitchStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitSwitchStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitSwitchStatement(this);
 		}
 	}
 
@@ -2498,11 +2501,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_caseBlock; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterCaseBlock(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterCaseBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitCaseBlock(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitCaseBlock(this);
 		}
 	}
 
@@ -2573,11 +2576,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_caseClauses; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterCaseClauses(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterCaseClauses(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitCaseClauses(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitCaseClauses(this);
 		}
 	}
 
@@ -2616,7 +2619,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class CaseClauseContext extends ParserRuleContext {
-		public TerminalNode Case() { return getToken(JavaScriptParser.Case, 0); }
+		public TerminalNode Case() { return getToken(SantaLangParser.Case, 0); }
 		public ExpressionSequenceContext expressionSequence() {
 			return getRuleContext(ExpressionSequenceContext.class,0);
 		}
@@ -2629,11 +2632,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_caseClause; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterCaseClause(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterCaseClause(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitCaseClause(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitCaseClause(this);
 		}
 	}
 
@@ -2673,7 +2676,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class DefaultClauseContext extends ParserRuleContext {
-		public TerminalNode Default() { return getToken(JavaScriptParser.Default, 0); }
+		public TerminalNode Default() { return getToken(SantaLangParser.Default, 0); }
 		public StatementListContext statementList() {
 			return getRuleContext(StatementListContext.class,0);
 		}
@@ -2683,11 +2686,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_defaultClause; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterDefaultClause(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterDefaultClause(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitDefaultClause(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitDefaultClause(this);
 		}
 	}
 
@@ -2725,7 +2728,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class LabelledStatementContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(JavaScriptParser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(SantaLangParser.Identifier, 0); }
 		public StatementContext statement() {
 			return getRuleContext(StatementContext.class,0);
 		}
@@ -2735,11 +2738,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_labelledStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterLabelledStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterLabelledStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitLabelledStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitLabelledStatement(this);
 		}
 	}
 
@@ -2769,7 +2772,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class ThrowStatementContext extends ParserRuleContext {
-		public TerminalNode Throw() { return getToken(JavaScriptParser.Throw, 0); }
+		public TerminalNode Throw() { return getToken(SantaLangParser.Throw, 0); }
 		public ExpressionSequenceContext expressionSequence() {
 			return getRuleContext(ExpressionSequenceContext.class,0);
 		}
@@ -2782,11 +2785,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_throwStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterThrowStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterThrowStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitThrowStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitThrowStatement(this);
 		}
 	}
 
@@ -2818,7 +2821,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class TryStatementContext extends ParserRuleContext {
-		public TerminalNode Try() { return getToken(JavaScriptParser.Try, 0); }
+		public TerminalNode Try() { return getToken(SantaLangParser.Try, 0); }
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
 		}
@@ -2834,11 +2837,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_tryStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterTryStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterTryStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitTryStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitTryStatement(this);
 		}
 	}
 
@@ -2894,7 +2897,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class CatchProductionContext extends ParserRuleContext {
-		public TerminalNode Catch() { return getToken(JavaScriptParser.Catch, 0); }
+		public TerminalNode Catch() { return getToken(SantaLangParser.Catch, 0); }
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
 		}
@@ -2907,11 +2910,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_catchProduction; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterCatchProduction(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterCatchProduction(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitCatchProduction(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitCatchProduction(this);
 		}
 	}
 
@@ -2962,7 +2965,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class FinallyProductionContext extends ParserRuleContext {
-		public TerminalNode Finally() { return getToken(JavaScriptParser.Finally, 0); }
+		public TerminalNode Finally() { return getToken(SantaLangParser.Finally, 0); }
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
 		}
@@ -2972,11 +2975,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_finallyProduction; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterFinallyProduction(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterFinallyProduction(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitFinallyProduction(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitFinallyProduction(this);
 		}
 	}
 
@@ -3004,7 +3007,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class DebuggerStatementContext extends ParserRuleContext {
-		public TerminalNode Debugger() { return getToken(JavaScriptParser.Debugger, 0); }
+		public TerminalNode Debugger() { return getToken(SantaLangParser.Debugger, 0); }
 		public EosContext eos() {
 			return getRuleContext(EosContext.class,0);
 		}
@@ -3014,11 +3017,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_debuggerStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterDebuggerStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterDebuggerStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitDebuggerStatement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitDebuggerStatement(this);
 		}
 	}
 
@@ -3046,12 +3049,12 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class FunctionDeclarationContext extends ParserRuleContext {
-		public TerminalNode Function() { return getToken(JavaScriptParser.Function, 0); }
-		public TerminalNode Identifier() { return getToken(JavaScriptParser.Identifier, 0); }
+		public TerminalNode Function() { return getToken(SantaLangParser.Function, 0); }
+		public TerminalNode Identifier() { return getToken(SantaLangParser.Identifier, 0); }
 		public FunctionBodyContext functionBody() {
 			return getRuleContext(FunctionBodyContext.class,0);
 		}
-		public TerminalNode Async() { return getToken(JavaScriptParser.Async, 0); }
+		public TerminalNode Async() { return getToken(SantaLangParser.Async, 0); }
 		public FormalParameterListContext formalParameterList() {
 			return getRuleContext(FormalParameterListContext.class,0);
 		}
@@ -3061,11 +3064,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_functionDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterFunctionDeclaration(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterFunctionDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitFunctionDeclaration(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitFunctionDeclaration(this);
 		}
 	}
 
@@ -3134,8 +3137,8 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class ClassDeclarationContext extends ParserRuleContext {
-		public TerminalNode Class() { return getToken(JavaScriptParser.Class, 0); }
-		public TerminalNode Identifier() { return getToken(JavaScriptParser.Identifier, 0); }
+		public TerminalNode Class() { return getToken(SantaLangParser.Class, 0); }
+		public TerminalNode Identifier() { return getToken(SantaLangParser.Identifier, 0); }
 		public ClassTailContext classTail() {
 			return getRuleContext(ClassTailContext.class,0);
 		}
@@ -3145,11 +3148,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_classDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterClassDeclaration(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterClassDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitClassDeclaration(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitClassDeclaration(this);
 		}
 	}
 
@@ -3179,7 +3182,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class ClassTailContext extends ParserRuleContext {
-		public TerminalNode Extends() { return getToken(JavaScriptParser.Extends, 0); }
+		public TerminalNode Extends() { return getToken(SantaLangParser.Extends, 0); }
 		public SingleExpressionContext singleExpression() {
 			return getRuleContext(SingleExpressionContext.class,0);
 		}
@@ -3195,11 +3198,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_classTail; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterClassTail(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterClassTail(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitClassTail(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitClassTail(this);
 		}
 	}
 
@@ -3260,17 +3263,17 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public MethodDefinitionContext methodDefinition() {
 			return getRuleContext(MethodDefinitionContext.class,0);
 		}
-		public List<TerminalNode> Static() { return getTokens(JavaScriptParser.Static); }
+		public List<TerminalNode> Static() { return getTokens(SantaLangParser.Static); }
 		public TerminalNode Static(int i) {
-			return getToken(JavaScriptParser.Static, i);
+			return getToken(SantaLangParser.Static, i);
 		}
-		public List<TerminalNode> Identifier() { return getTokens(JavaScriptParser.Identifier); }
+		public List<TerminalNode> Identifier() { return getTokens(SantaLangParser.Identifier); }
 		public TerminalNode Identifier(int i) {
-			return getToken(JavaScriptParser.Identifier, i);
+			return getToken(SantaLangParser.Identifier, i);
 		}
-		public List<TerminalNode> Async() { return getTokens(JavaScriptParser.Async); }
+		public List<TerminalNode> Async() { return getTokens(SantaLangParser.Async); }
 		public TerminalNode Async(int i) {
-			return getToken(JavaScriptParser.Async, i);
+			return getToken(SantaLangParser.Async, i);
 		}
 		public EmptyStatementContext emptyStatement() {
 			return getRuleContext(EmptyStatementContext.class,0);
@@ -3287,11 +3290,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_classElement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterClassElement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterClassElement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitClassElement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitClassElement(this);
 		}
 	}
 
@@ -3410,11 +3413,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_methodDefinition; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterMethodDefinition(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterMethodDefinition(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitMethodDefinition(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitMethodDefinition(this);
 		}
 	}
 
@@ -3586,11 +3589,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_formalParameterList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterFormalParameterList(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterFormalParameterList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitFormalParameterList(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitFormalParameterList(this);
 		}
 	}
 
@@ -3677,11 +3680,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_formalParameterArg; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterFormalParameterArg(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterFormalParameterArg(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitFormalParameterArg(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitFormalParameterArg(this);
 		}
 	}
 
@@ -3720,7 +3723,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class LastFormalParameterArgContext extends ParserRuleContext {
-		public TerminalNode Ellipsis() { return getToken(JavaScriptParser.Ellipsis, 0); }
+		public TerminalNode Ellipsis() { return getToken(SantaLangParser.Ellipsis, 0); }
 		public SingleExpressionContext singleExpression() {
 			return getRuleContext(SingleExpressionContext.class,0);
 		}
@@ -3730,11 +3733,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_lastFormalParameterArg; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterLastFormalParameterArg(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterLastFormalParameterArg(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitLastFormalParameterArg(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitLastFormalParameterArg(this);
 		}
 	}
 
@@ -3771,11 +3774,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_functionBody; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterFunctionBody(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterFunctionBody(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitFunctionBody(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitFunctionBody(this);
 		}
 	}
 
@@ -3821,11 +3824,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_sourceElements; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterSourceElements(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterSourceElements(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitSourceElements(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitSourceElements(this);
 		}
 	}
 
@@ -3879,11 +3882,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_arrayLiteral; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterArrayLiteral(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterArrayLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitArrayLiteral(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitArrayLiteral(this);
 		}
 	}
 
@@ -3927,11 +3930,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_elementList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterElementList(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterElementList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitElementList(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitElementList(this);
 		}
 	}
 
@@ -4030,18 +4033,18 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public SingleExpressionContext singleExpression() {
 			return getRuleContext(SingleExpressionContext.class,0);
 		}
-		public TerminalNode Ellipsis() { return getToken(JavaScriptParser.Ellipsis, 0); }
+		public TerminalNode Ellipsis() { return getToken(SantaLangParser.Ellipsis, 0); }
 		public ArrayElementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_arrayElement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterArrayElement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterArrayElement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitArrayElement(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitArrayElement(this);
 		}
 	}
 
@@ -4090,11 +4093,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_objectLiteral; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterObjectLiteral(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterObjectLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitObjectLiteral(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitObjectLiteral(this);
 		}
 	}
 
@@ -4182,11 +4185,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public PropertyExpressionAssignmentContext(PropertyAssignmentContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterPropertyExpressionAssignment(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterPropertyExpressionAssignment(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitPropertyExpressionAssignment(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitPropertyExpressionAssignment(this);
 		}
 	}
 	public static class ComputedPropertyExpressionAssignmentContext extends PropertyAssignmentContext {
@@ -4199,26 +4202,26 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public ComputedPropertyExpressionAssignmentContext(PropertyAssignmentContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterComputedPropertyExpressionAssignment(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterComputedPropertyExpressionAssignment(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitComputedPropertyExpressionAssignment(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitComputedPropertyExpressionAssignment(this);
 		}
 	}
 	public static class PropertyShorthandContext extends PropertyAssignmentContext {
 		public SingleExpressionContext singleExpression() {
 			return getRuleContext(SingleExpressionContext.class,0);
 		}
-		public TerminalNode Ellipsis() { return getToken(JavaScriptParser.Ellipsis, 0); }
+		public TerminalNode Ellipsis() { return getToken(SantaLangParser.Ellipsis, 0); }
 		public PropertyShorthandContext(PropertyAssignmentContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterPropertyShorthand(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterPropertyShorthand(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitPropertyShorthand(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitPropertyShorthand(this);
 		}
 	}
 	public static class PropertySetterContext extends PropertyAssignmentContext {
@@ -4234,11 +4237,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public PropertySetterContext(PropertyAssignmentContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterPropertySetter(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterPropertySetter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitPropertySetter(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitPropertySetter(this);
 		}
 	}
 	public static class PropertyGetterContext extends PropertyAssignmentContext {
@@ -4251,11 +4254,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public PropertyGetterContext(PropertyAssignmentContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterPropertyGetter(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterPropertyGetter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitPropertyGetter(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitPropertyGetter(this);
 		}
 	}
 	public static class FunctionPropertyContext extends PropertyAssignmentContext {
@@ -4265,18 +4268,18 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public FunctionBodyContext functionBody() {
 			return getRuleContext(FunctionBodyContext.class,0);
 		}
-		public TerminalNode Async() { return getToken(JavaScriptParser.Async, 0); }
+		public TerminalNode Async() { return getToken(SantaLangParser.Async, 0); }
 		public FormalParameterListContext formalParameterList() {
 			return getRuleContext(FormalParameterListContext.class,0);
 		}
 		public FunctionPropertyContext(PropertyAssignmentContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterFunctionProperty(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterFunctionProperty(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitFunctionProperty(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitFunctionProperty(this);
 		}
 	}
 
@@ -4437,7 +4440,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public IdentifierNameContext identifierName() {
 			return getRuleContext(IdentifierNameContext.class,0);
 		}
-		public TerminalNode StringLiteral() { return getToken(JavaScriptParser.StringLiteral, 0); }
+		public TerminalNode StringLiteral() { return getToken(SantaLangParser.StringLiteral, 0); }
 		public NumericLiteralContext numericLiteral() {
 			return getRuleContext(NumericLiteralContext.class,0);
 		}
@@ -4450,11 +4453,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_propertyName; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterPropertyName(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterPropertyName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitPropertyName(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitPropertyName(this);
 		}
 	}
 
@@ -4577,11 +4580,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_arguments; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterArguments(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterArguments(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitArguments(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitArguments(this);
 		}
 	}
 
@@ -4652,19 +4655,19 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public SingleExpressionContext singleExpression() {
 			return getRuleContext(SingleExpressionContext.class,0);
 		}
-		public TerminalNode Identifier() { return getToken(JavaScriptParser.Identifier, 0); }
-		public TerminalNode Ellipsis() { return getToken(JavaScriptParser.Ellipsis, 0); }
+		public TerminalNode Identifier() { return getToken(SantaLangParser.Identifier, 0); }
+		public TerminalNode Ellipsis() { return getToken(SantaLangParser.Ellipsis, 0); }
 		public ArgumentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_argument; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterArgument(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterArgument(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitArgument(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitArgument(this);
 		}
 	}
 
@@ -4727,11 +4730,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_expressionSequence; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterExpressionSequence(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterExpressionSequence(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitExpressionSequence(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitExpressionSequence(this);
 		}
 	}
 
@@ -4790,15 +4793,15 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public SingleExpressionContext singleExpression() {
 			return getRuleContext(SingleExpressionContext.class,0);
 		}
-		public TerminalNode TemplateStringLiteral() { return getToken(JavaScriptParser.TemplateStringLiteral, 0); }
+		public TerminalNode TemplateStringLiteral() { return getToken(SantaLangParser.TemplateStringLiteral, 0); }
 		public TemplateStringExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterTemplateStringExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterTemplateStringExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitTemplateStringExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitTemplateStringExpression(this);
 		}
 	}
 	public static class TernaryExpressionContext extends SingleExpressionContext {
@@ -4811,11 +4814,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public TernaryExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterTernaryExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterTernaryExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitTernaryExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitTernaryExpression(this);
 		}
 	}
 	public static class LogicalAndExpressionContext extends SingleExpressionContext {
@@ -4828,11 +4831,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public LogicalAndExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterLogicalAndExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterLogicalAndExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitLogicalAndExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitLogicalAndExpression(this);
 		}
 	}
 	public static class PowerExpressionContext extends SingleExpressionContext {
@@ -4845,11 +4848,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public PowerExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterPowerExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterPowerExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitPowerExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitPowerExpression(this);
 		}
 	}
 	public static class PreIncrementExpressionContext extends SingleExpressionContext {
@@ -4859,11 +4862,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public PreIncrementExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterPreIncrementExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterPreIncrementExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitPreIncrementExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitPreIncrementExpression(this);
 		}
 	}
 	public static class ObjectLiteralExpressionContext extends SingleExpressionContext {
@@ -4873,24 +4876,24 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public ObjectLiteralExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterObjectLiteralExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterObjectLiteralExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitObjectLiteralExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitObjectLiteralExpression(this);
 		}
 	}
 	public static class MetaExpressionContext extends SingleExpressionContext {
-		public TerminalNode New() { return getToken(JavaScriptParser.New, 0); }
-		public TerminalNode Identifier() { return getToken(JavaScriptParser.Identifier, 0); }
+		public TerminalNode New() { return getToken(SantaLangParser.New, 0); }
+		public TerminalNode Identifier() { return getToken(SantaLangParser.Identifier, 0); }
 		public MetaExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterMetaExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterMetaExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitMetaExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitMetaExpression(this);
 		}
 	}
 	public static class InExpressionContext extends SingleExpressionContext {
@@ -4900,15 +4903,15 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public SingleExpressionContext singleExpression(int i) {
 			return getRuleContext(SingleExpressionContext.class,i);
 		}
-		public TerminalNode In() { return getToken(JavaScriptParser.In, 0); }
+		public TerminalNode In() { return getToken(SantaLangParser.In, 0); }
 		public InExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterInExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterInExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitInExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitInExpression(this);
 		}
 	}
 	public static class LogicalOrExpressionContext extends SingleExpressionContext {
@@ -4921,11 +4924,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public LogicalOrExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterLogicalOrExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterLogicalOrExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitLogicalOrExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitLogicalOrExpression(this);
 		}
 	}
 	public static class NotExpressionContext extends SingleExpressionContext {
@@ -4935,11 +4938,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public NotExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterNotExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterNotExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitNotExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitNotExpression(this);
 		}
 	}
 	public static class PreDecreaseExpressionContext extends SingleExpressionContext {
@@ -4949,11 +4952,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public PreDecreaseExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterPreDecreaseExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterPreDecreaseExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitPreDecreaseExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitPreDecreaseExpression(this);
 		}
 	}
 	public static class ArgumentsExpressionContext extends SingleExpressionContext {
@@ -4966,38 +4969,38 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public ArgumentsExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterArgumentsExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterArgumentsExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitArgumentsExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitArgumentsExpression(this);
 		}
 	}
 	public static class AwaitExpressionContext extends SingleExpressionContext {
-		public TerminalNode Await() { return getToken(JavaScriptParser.Await, 0); }
+		public TerminalNode Await() { return getToken(SantaLangParser.Await, 0); }
 		public SingleExpressionContext singleExpression() {
 			return getRuleContext(SingleExpressionContext.class,0);
 		}
 		public AwaitExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterAwaitExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterAwaitExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitAwaitExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitAwaitExpression(this);
 		}
 	}
 	public static class ThisExpressionContext extends SingleExpressionContext {
-		public TerminalNode This() { return getToken(JavaScriptParser.This, 0); }
+		public TerminalNode This() { return getToken(SantaLangParser.This, 0); }
 		public ThisExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterThisExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterThisExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitThisExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitThisExpression(this);
 		}
 	}
 	public static class FunctionExpressionContext extends SingleExpressionContext {
@@ -5007,11 +5010,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public FunctionExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterFunctionExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterFunctionExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitFunctionExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitFunctionExpression(this);
 		}
 	}
 	public static class UnaryMinusExpressionContext extends SingleExpressionContext {
@@ -5021,11 +5024,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public UnaryMinusExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterUnaryMinusExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterUnaryMinusExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitUnaryMinusExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitUnaryMinusExpression(this);
 		}
 	}
 	public static class AssignmentExpressionContext extends SingleExpressionContext {
@@ -5038,11 +5041,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public AssignmentExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterAssignmentExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterAssignmentExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitAssignmentExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitAssignmentExpression(this);
 		}
 	}
 	public static class PostDecreaseExpressionContext extends SingleExpressionContext {
@@ -5052,26 +5055,26 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public PostDecreaseExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterPostDecreaseExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterPostDecreaseExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitPostDecreaseExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitPostDecreaseExpression(this);
 		}
 	}
 	public static class TypeofExpressionContext extends SingleExpressionContext {
-		public TerminalNode Typeof() { return getToken(JavaScriptParser.Typeof, 0); }
+		public TerminalNode Typeof() { return getToken(SantaLangParser.Typeof, 0); }
 		public SingleExpressionContext singleExpression() {
 			return getRuleContext(SingleExpressionContext.class,0);
 		}
 		public TypeofExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterTypeofExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterTypeofExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitTypeofExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitTypeofExpression(this);
 		}
 	}
 	public static class InstanceofExpressionContext extends SingleExpressionContext {
@@ -5081,15 +5084,15 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public SingleExpressionContext singleExpression(int i) {
 			return getRuleContext(SingleExpressionContext.class,i);
 		}
-		public TerminalNode Instanceof() { return getToken(JavaScriptParser.Instanceof, 0); }
+		public TerminalNode Instanceof() { return getToken(SantaLangParser.Instanceof, 0); }
 		public InstanceofExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterInstanceofExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterInstanceofExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitInstanceofExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitInstanceofExpression(this);
 		}
 	}
 	public static class UnaryPlusExpressionContext extends SingleExpressionContext {
@@ -5099,41 +5102,41 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public UnaryPlusExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterUnaryPlusExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterUnaryPlusExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitUnaryPlusExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitUnaryPlusExpression(this);
 		}
 	}
 	public static class DeleteExpressionContext extends SingleExpressionContext {
-		public TerminalNode Delete() { return getToken(JavaScriptParser.Delete, 0); }
+		public TerminalNode Delete() { return getToken(SantaLangParser.Delete, 0); }
 		public SingleExpressionContext singleExpression() {
 			return getRuleContext(SingleExpressionContext.class,0);
 		}
 		public DeleteExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterDeleteExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterDeleteExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitDeleteExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitDeleteExpression(this);
 		}
 	}
 	public static class ImportExpressionContext extends SingleExpressionContext {
-		public TerminalNode Import() { return getToken(JavaScriptParser.Import, 0); }
+		public TerminalNode Import() { return getToken(SantaLangParser.Import, 0); }
 		public SingleExpressionContext singleExpression() {
 			return getRuleContext(SingleExpressionContext.class,0);
 		}
 		public ImportExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterImportExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterImportExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitImportExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitImportExpression(this);
 		}
 	}
 	public static class EqualityExpressionContext extends SingleExpressionContext {
@@ -5146,11 +5149,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public EqualityExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterEqualityExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterEqualityExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitEqualityExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitEqualityExpression(this);
 		}
 	}
 	public static class BitXOrExpressionContext extends SingleExpressionContext {
@@ -5163,23 +5166,23 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public BitXOrExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterBitXOrExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterBitXOrExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitBitXOrExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitBitXOrExpression(this);
 		}
 	}
 	public static class SuperExpressionContext extends SingleExpressionContext {
-		public TerminalNode Super() { return getToken(JavaScriptParser.Super, 0); }
+		public TerminalNode Super() { return getToken(SantaLangParser.Super, 0); }
 		public SuperExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterSuperExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterSuperExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitSuperExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitSuperExpression(this);
 		}
 	}
 	public static class MultiplicativeExpressionContext extends SingleExpressionContext {
@@ -5192,11 +5195,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public MultiplicativeExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterMultiplicativeExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterMultiplicativeExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitMultiplicativeExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitMultiplicativeExpression(this);
 		}
 	}
 	public static class BitShiftExpressionContext extends SingleExpressionContext {
@@ -5209,11 +5212,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public BitShiftExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterBitShiftExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterBitShiftExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitBitShiftExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitBitShiftExpression(this);
 		}
 	}
 	public static class ParenthesizedExpressionContext extends SingleExpressionContext {
@@ -5223,11 +5226,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public ParenthesizedExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterParenthesizedExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterParenthesizedExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitParenthesizedExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitParenthesizedExpression(this);
 		}
 	}
 	public static class AdditiveExpressionContext extends SingleExpressionContext {
@@ -5240,11 +5243,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public AdditiveExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterAdditiveExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterAdditiveExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitAdditiveExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitAdditiveExpression(this);
 		}
 	}
 	public static class RelationalExpressionContext extends SingleExpressionContext {
@@ -5257,11 +5260,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public RelationalExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterRelationalExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterRelationalExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitRelationalExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitRelationalExpression(this);
 		}
 	}
 	public static class PostIncrementExpressionContext extends SingleExpressionContext {
@@ -5271,11 +5274,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public PostIncrementExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterPostIncrementExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterPostIncrementExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitPostIncrementExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitPostIncrementExpression(this);
 		}
 	}
 	public static class YieldExpressionContext extends SingleExpressionContext {
@@ -5285,11 +5288,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public YieldExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterYieldExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterYieldExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitYieldExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitYieldExpression(this);
 		}
 	}
 	public static class BitNotExpressionContext extends SingleExpressionContext {
@@ -5299,15 +5302,15 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public BitNotExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterBitNotExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterBitNotExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitBitNotExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitBitNotExpression(this);
 		}
 	}
 	public static class NewExpressionContext extends SingleExpressionContext {
-		public TerminalNode New() { return getToken(JavaScriptParser.New, 0); }
+		public TerminalNode New() { return getToken(SantaLangParser.New, 0); }
 		public SingleExpressionContext singleExpression() {
 			return getRuleContext(SingleExpressionContext.class,0);
 		}
@@ -5317,11 +5320,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public NewExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterNewExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterNewExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitNewExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitNewExpression(this);
 		}
 	}
 	public static class LiteralExpressionContext extends SingleExpressionContext {
@@ -5331,11 +5334,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public LiteralExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterLiteralExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterLiteralExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitLiteralExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitLiteralExpression(this);
 		}
 	}
 	public static class ArrayLiteralExpressionContext extends SingleExpressionContext {
@@ -5345,11 +5348,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public ArrayLiteralExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterArrayLiteralExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterArrayLiteralExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitArrayLiteralExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitArrayLiteralExpression(this);
 		}
 	}
 	public static class MemberDotExpressionContext extends SingleExpressionContext {
@@ -5362,27 +5365,27 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public MemberDotExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterMemberDotExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterMemberDotExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitMemberDotExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitMemberDotExpression(this);
 		}
 	}
 	public static class ClassExpressionContext extends SingleExpressionContext {
-		public TerminalNode Class() { return getToken(JavaScriptParser.Class, 0); }
+		public TerminalNode Class() { return getToken(SantaLangParser.Class, 0); }
 		public ClassTailContext classTail() {
 			return getRuleContext(ClassTailContext.class,0);
 		}
-		public TerminalNode Identifier() { return getToken(JavaScriptParser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(SantaLangParser.Identifier, 0); }
 		public ClassExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterClassExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterClassExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitClassExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitClassExpression(this);
 		}
 	}
 	public static class MemberIndexExpressionContext extends SingleExpressionContext {
@@ -5395,23 +5398,23 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public MemberIndexExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterMemberIndexExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterMemberIndexExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitMemberIndexExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitMemberIndexExpression(this);
 		}
 	}
 	public static class IdentifierExpressionContext extends SingleExpressionContext {
-		public TerminalNode Identifier() { return getToken(JavaScriptParser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(SantaLangParser.Identifier, 0); }
 		public IdentifierExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterIdentifierExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterIdentifierExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitIdentifierExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitIdentifierExpression(this);
 		}
 	}
 	public static class BitAndExpressionContext extends SingleExpressionContext {
@@ -5424,11 +5427,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public BitAndExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterBitAndExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterBitAndExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitBitAndExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitBitAndExpression(this);
 		}
 	}
 	public static class BitOrExpressionContext extends SingleExpressionContext {
@@ -5441,11 +5444,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public BitOrExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterBitOrExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterBitOrExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitBitOrExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitBitOrExpression(this);
 		}
 	}
 	public static class AssignmentOperatorExpressionContext extends SingleExpressionContext {
@@ -5461,26 +5464,26 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public AssignmentOperatorExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterAssignmentOperatorExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterAssignmentOperatorExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitAssignmentOperatorExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitAssignmentOperatorExpression(this);
 		}
 	}
 	public static class VoidExpressionContext extends SingleExpressionContext {
-		public TerminalNode Void() { return getToken(JavaScriptParser.Void, 0); }
+		public TerminalNode Void() { return getToken(SantaLangParser.Void, 0); }
 		public SingleExpressionContext singleExpression() {
 			return getRuleContext(SingleExpressionContext.class,0);
 		}
 		public VoidExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterVoidExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterVoidExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitVoidExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitVoidExpression(this);
 		}
 	}
 	public static class CoalesceExpressionContext extends SingleExpressionContext {
@@ -5493,11 +5496,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public CoalesceExpressionContext(SingleExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterCoalesceExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterCoalesceExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitCoalesceExpression(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitCoalesceExpression(this);
 		}
 	}
 
@@ -6158,7 +6161,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class AssignableContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(JavaScriptParser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(SantaLangParser.Identifier, 0); }
 		public ArrayLiteralContext arrayLiteral() {
 			return getRuleContext(ArrayLiteralContext.class,0);
 		}
@@ -6171,11 +6174,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_assignable; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterAssignable(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterAssignable(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitAssignable(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitAssignable(this);
 		}
 	}
 
@@ -6234,22 +6237,22 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		}
 	}
 	public static class AnoymousFunctionDeclContext extends AnoymousFunctionContext {
-		public TerminalNode Function() { return getToken(JavaScriptParser.Function, 0); }
+		public TerminalNode Function() { return getToken(SantaLangParser.Function, 0); }
 		public FunctionBodyContext functionBody() {
 			return getRuleContext(FunctionBodyContext.class,0);
 		}
-		public TerminalNode Async() { return getToken(JavaScriptParser.Async, 0); }
+		public TerminalNode Async() { return getToken(SantaLangParser.Async, 0); }
 		public FormalParameterListContext formalParameterList() {
 			return getRuleContext(FormalParameterListContext.class,0);
 		}
 		public AnoymousFunctionDeclContext(AnoymousFunctionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterAnoymousFunctionDecl(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterAnoymousFunctionDecl(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitAnoymousFunctionDecl(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitAnoymousFunctionDecl(this);
 		}
 	}
 	public static class ArrowFunctionContext extends AnoymousFunctionContext {
@@ -6259,15 +6262,15 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public ArrowFunctionBodyContext arrowFunctionBody() {
 			return getRuleContext(ArrowFunctionBodyContext.class,0);
 		}
-		public TerminalNode Async() { return getToken(JavaScriptParser.Async, 0); }
+		public TerminalNode Async() { return getToken(SantaLangParser.Async, 0); }
 		public ArrowFunctionContext(AnoymousFunctionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterArrowFunction(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterArrowFunction(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitArrowFunction(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitArrowFunction(this);
 		}
 	}
 	public static class FunctionDeclContext extends AnoymousFunctionContext {
@@ -6277,11 +6280,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public FunctionDeclContext(AnoymousFunctionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterFunctionDecl(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterFunctionDecl(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitFunctionDecl(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitFunctionDecl(this);
 		}
 	}
 
@@ -6385,7 +6388,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class ArrowFunctionParametersContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(JavaScriptParser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(SantaLangParser.Identifier, 0); }
 		public FormalParameterListContext formalParameterList() {
 			return getRuleContext(FormalParameterListContext.class,0);
 		}
@@ -6395,11 +6398,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_arrowFunctionParameters; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterArrowFunctionParameters(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterArrowFunctionParameters(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitArrowFunctionParameters(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitArrowFunctionParameters(this);
 		}
 	}
 
@@ -6465,11 +6468,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_arrowFunctionBody; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterArrowFunctionBody(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterArrowFunctionBody(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitArrowFunctionBody(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitArrowFunctionBody(this);
 		}
 	}
 
@@ -6518,11 +6521,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_assignmentOperator; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterAssignmentOperator(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterAssignmentOperator(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitAssignmentOperator(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitAssignmentOperator(this);
 		}
 	}
 
@@ -6557,11 +6560,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class LiteralContext extends ParserRuleContext {
-		public TerminalNode NullLiteral() { return getToken(JavaScriptParser.NullLiteral, 0); }
-		public TerminalNode BooleanLiteral() { return getToken(JavaScriptParser.BooleanLiteral, 0); }
-		public TerminalNode StringLiteral() { return getToken(JavaScriptParser.StringLiteral, 0); }
-		public TerminalNode TemplateStringLiteral() { return getToken(JavaScriptParser.TemplateStringLiteral, 0); }
-		public TerminalNode RegularExpressionLiteral() { return getToken(JavaScriptParser.RegularExpressionLiteral, 0); }
+		public TerminalNode NullLiteral() { return getToken(SantaLangParser.NullLiteral, 0); }
+		public TerminalNode BooleanLiteral() { return getToken(SantaLangParser.BooleanLiteral, 0); }
+		public TerminalNode StringLiteral() { return getToken(SantaLangParser.StringLiteral, 0); }
+		public TerminalNode TemplateStringLiteral() { return getToken(SantaLangParser.TemplateStringLiteral, 0); }
+		public TerminalNode RegularExpressionLiteral() { return getToken(SantaLangParser.RegularExpressionLiteral, 0); }
 		public NumericLiteralContext numericLiteral() {
 			return getRuleContext(NumericLiteralContext.class,0);
 		}
@@ -6574,11 +6577,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_literal; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterLiteral(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitLiteral(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitLiteral(this);
 		}
 	}
 
@@ -6661,22 +6664,22 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class NumericLiteralContext extends ParserRuleContext {
-		public TerminalNode DecimalLiteral() { return getToken(JavaScriptParser.DecimalLiteral, 0); }
-		public TerminalNode HexIntegerLiteral() { return getToken(JavaScriptParser.HexIntegerLiteral, 0); }
-		public TerminalNode OctalIntegerLiteral() { return getToken(JavaScriptParser.OctalIntegerLiteral, 0); }
-		public TerminalNode OctalIntegerLiteral2() { return getToken(JavaScriptParser.OctalIntegerLiteral2, 0); }
-		public TerminalNode BinaryIntegerLiteral() { return getToken(JavaScriptParser.BinaryIntegerLiteral, 0); }
+		public TerminalNode DecimalLiteral() { return getToken(SantaLangParser.DecimalLiteral, 0); }
+		public TerminalNode HexIntegerLiteral() { return getToken(SantaLangParser.HexIntegerLiteral, 0); }
+		public TerminalNode OctalIntegerLiteral() { return getToken(SantaLangParser.OctalIntegerLiteral, 0); }
+		public TerminalNode OctalIntegerLiteral2() { return getToken(SantaLangParser.OctalIntegerLiteral2, 0); }
+		public TerminalNode BinaryIntegerLiteral() { return getToken(SantaLangParser.BinaryIntegerLiteral, 0); }
 		public NumericLiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_numericLiteral; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterNumericLiteral(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterNumericLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitNumericLiteral(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitNumericLiteral(this);
 		}
 	}
 
@@ -6711,21 +6714,21 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class BigintLiteralContext extends ParserRuleContext {
-		public TerminalNode BigDecimalIntegerLiteral() { return getToken(JavaScriptParser.BigDecimalIntegerLiteral, 0); }
-		public TerminalNode BigHexIntegerLiteral() { return getToken(JavaScriptParser.BigHexIntegerLiteral, 0); }
-		public TerminalNode BigOctalIntegerLiteral() { return getToken(JavaScriptParser.BigOctalIntegerLiteral, 0); }
-		public TerminalNode BigBinaryIntegerLiteral() { return getToken(JavaScriptParser.BigBinaryIntegerLiteral, 0); }
+		public TerminalNode BigDecimalIntegerLiteral() { return getToken(SantaLangParser.BigDecimalIntegerLiteral, 0); }
+		public TerminalNode BigHexIntegerLiteral() { return getToken(SantaLangParser.BigHexIntegerLiteral, 0); }
+		public TerminalNode BigOctalIntegerLiteral() { return getToken(SantaLangParser.BigOctalIntegerLiteral, 0); }
+		public TerminalNode BigBinaryIntegerLiteral() { return getToken(SantaLangParser.BigBinaryIntegerLiteral, 0); }
 		public BigintLiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_bigintLiteral; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterBigintLiteral(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterBigintLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitBigintLiteral(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitBigintLiteral(this);
 		}
 	}
 
@@ -6760,7 +6763,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class IdentifierNameContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(JavaScriptParser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(SantaLangParser.Identifier, 0); }
 		public ReservedWordContext reservedWord() {
 			return getRuleContext(ReservedWordContext.class,0);
 		}
@@ -6770,11 +6773,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_identifierName; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterIdentifierName(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterIdentifierName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitIdentifierName(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitIdentifierName(this);
 		}
 	}
 
@@ -6865,19 +6868,19 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		public KeywordContext keyword() {
 			return getRuleContext(KeywordContext.class,0);
 		}
-		public TerminalNode NullLiteral() { return getToken(JavaScriptParser.NullLiteral, 0); }
-		public TerminalNode BooleanLiteral() { return getToken(JavaScriptParser.BooleanLiteral, 0); }
+		public TerminalNode NullLiteral() { return getToken(SantaLangParser.NullLiteral, 0); }
+		public TerminalNode BooleanLiteral() { return getToken(SantaLangParser.BooleanLiteral, 0); }
 		public ReservedWordContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_reservedWord; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterReservedWord(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterReservedWord(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitReservedWord(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitReservedWord(this);
 		}
 	}
 
@@ -6970,63 +6973,63 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class KeywordContext extends ParserRuleContext {
-		public TerminalNode Break() { return getToken(JavaScriptParser.Break, 0); }
-		public TerminalNode Do() { return getToken(JavaScriptParser.Do, 0); }
-		public TerminalNode Instanceof() { return getToken(JavaScriptParser.Instanceof, 0); }
-		public TerminalNode Typeof() { return getToken(JavaScriptParser.Typeof, 0); }
-		public TerminalNode Case() { return getToken(JavaScriptParser.Case, 0); }
-		public TerminalNode Else() { return getToken(JavaScriptParser.Else, 0); }
-		public TerminalNode New() { return getToken(JavaScriptParser.New, 0); }
-		public TerminalNode Var() { return getToken(JavaScriptParser.Var, 0); }
-		public TerminalNode Catch() { return getToken(JavaScriptParser.Catch, 0); }
-		public TerminalNode Finally() { return getToken(JavaScriptParser.Finally, 0); }
-		public TerminalNode Return() { return getToken(JavaScriptParser.Return, 0); }
-		public TerminalNode Void() { return getToken(JavaScriptParser.Void, 0); }
-		public TerminalNode Continue() { return getToken(JavaScriptParser.Continue, 0); }
-		public TerminalNode For() { return getToken(JavaScriptParser.For, 0); }
-		public TerminalNode Switch() { return getToken(JavaScriptParser.Switch, 0); }
-		public TerminalNode While() { return getToken(JavaScriptParser.While, 0); }
-		public TerminalNode Debugger() { return getToken(JavaScriptParser.Debugger, 0); }
-		public TerminalNode Function() { return getToken(JavaScriptParser.Function, 0); }
-		public TerminalNode This() { return getToken(JavaScriptParser.This, 0); }
-		public TerminalNode With() { return getToken(JavaScriptParser.With, 0); }
-		public TerminalNode Default() { return getToken(JavaScriptParser.Default, 0); }
-		public TerminalNode If() { return getToken(JavaScriptParser.If, 0); }
-		public TerminalNode Throw() { return getToken(JavaScriptParser.Throw, 0); }
-		public TerminalNode Delete() { return getToken(JavaScriptParser.Delete, 0); }
-		public TerminalNode In() { return getToken(JavaScriptParser.In, 0); }
-		public TerminalNode Try() { return getToken(JavaScriptParser.Try, 0); }
-		public TerminalNode Class() { return getToken(JavaScriptParser.Class, 0); }
-		public TerminalNode Enum() { return getToken(JavaScriptParser.Enum, 0); }
-		public TerminalNode Extends() { return getToken(JavaScriptParser.Extends, 0); }
-		public TerminalNode Super() { return getToken(JavaScriptParser.Super, 0); }
-		public TerminalNode Const() { return getToken(JavaScriptParser.Const, 0); }
-		public TerminalNode Export() { return getToken(JavaScriptParser.Export, 0); }
-		public TerminalNode Import() { return getToken(JavaScriptParser.Import, 0); }
-		public TerminalNode Implements() { return getToken(JavaScriptParser.Implements, 0); }
-		public TerminalNode Let() { return getToken(JavaScriptParser.Let, 0); }
-		public TerminalNode Private() { return getToken(JavaScriptParser.Private, 0); }
-		public TerminalNode Public() { return getToken(JavaScriptParser.Public, 0); }
-		public TerminalNode Interface() { return getToken(JavaScriptParser.Interface, 0); }
-		public TerminalNode Package() { return getToken(JavaScriptParser.Package, 0); }
-		public TerminalNode Protected() { return getToken(JavaScriptParser.Protected, 0); }
-		public TerminalNode Static() { return getToken(JavaScriptParser.Static, 0); }
-		public TerminalNode Yield() { return getToken(JavaScriptParser.Yield, 0); }
-		public TerminalNode Async() { return getToken(JavaScriptParser.Async, 0); }
-		public TerminalNode Await() { return getToken(JavaScriptParser.Await, 0); }
-		public TerminalNode From() { return getToken(JavaScriptParser.From, 0); }
-		public TerminalNode As() { return getToken(JavaScriptParser.As, 0); }
+		public TerminalNode Break() { return getToken(SantaLangParser.Break, 0); }
+		public TerminalNode Do() { return getToken(SantaLangParser.Do, 0); }
+		public TerminalNode Instanceof() { return getToken(SantaLangParser.Instanceof, 0); }
+		public TerminalNode Typeof() { return getToken(SantaLangParser.Typeof, 0); }
+		public TerminalNode Case() { return getToken(SantaLangParser.Case, 0); }
+		public TerminalNode Else() { return getToken(SantaLangParser.Else, 0); }
+		public TerminalNode New() { return getToken(SantaLangParser.New, 0); }
+		public TerminalNode Var() { return getToken(SantaLangParser.Var, 0); }
+		public TerminalNode Catch() { return getToken(SantaLangParser.Catch, 0); }
+		public TerminalNode Finally() { return getToken(SantaLangParser.Finally, 0); }
+		public TerminalNode Return() { return getToken(SantaLangParser.Return, 0); }
+		public TerminalNode Void() { return getToken(SantaLangParser.Void, 0); }
+		public TerminalNode Continue() { return getToken(SantaLangParser.Continue, 0); }
+		public TerminalNode For() { return getToken(SantaLangParser.For, 0); }
+		public TerminalNode Switch() { return getToken(SantaLangParser.Switch, 0); }
+		public TerminalNode While() { return getToken(SantaLangParser.While, 0); }
+		public TerminalNode Debugger() { return getToken(SantaLangParser.Debugger, 0); }
+		public TerminalNode Function() { return getToken(SantaLangParser.Function, 0); }
+		public TerminalNode This() { return getToken(SantaLangParser.This, 0); }
+		public TerminalNode With() { return getToken(SantaLangParser.With, 0); }
+		public TerminalNode Default() { return getToken(SantaLangParser.Default, 0); }
+		public TerminalNode If() { return getToken(SantaLangParser.If, 0); }
+		public TerminalNode Throw() { return getToken(SantaLangParser.Throw, 0); }
+		public TerminalNode Delete() { return getToken(SantaLangParser.Delete, 0); }
+		public TerminalNode In() { return getToken(SantaLangParser.In, 0); }
+		public TerminalNode Try() { return getToken(SantaLangParser.Try, 0); }
+		public TerminalNode Class() { return getToken(SantaLangParser.Class, 0); }
+		public TerminalNode Enum() { return getToken(SantaLangParser.Enum, 0); }
+		public TerminalNode Extends() { return getToken(SantaLangParser.Extends, 0); }
+		public TerminalNode Super() { return getToken(SantaLangParser.Super, 0); }
+		public TerminalNode Const() { return getToken(SantaLangParser.Const, 0); }
+		public TerminalNode Export() { return getToken(SantaLangParser.Export, 0); }
+		public TerminalNode Import() { return getToken(SantaLangParser.Import, 0); }
+		public TerminalNode Implements() { return getToken(SantaLangParser.Implements, 0); }
+		public TerminalNode Let() { return getToken(SantaLangParser.Let, 0); }
+		public TerminalNode Private() { return getToken(SantaLangParser.Private, 0); }
+		public TerminalNode Public() { return getToken(SantaLangParser.Public, 0); }
+		public TerminalNode Interface() { return getToken(SantaLangParser.Interface, 0); }
+		public TerminalNode Package() { return getToken(SantaLangParser.Package, 0); }
+		public TerminalNode Protected() { return getToken(SantaLangParser.Protected, 0); }
+		public TerminalNode Static() { return getToken(SantaLangParser.Static, 0); }
+		public TerminalNode Yield() { return getToken(SantaLangParser.Yield, 0); }
+		public TerminalNode Async() { return getToken(SantaLangParser.Async, 0); }
+		public TerminalNode Await() { return getToken(SantaLangParser.Await, 0); }
+		public TerminalNode From() { return getToken(SantaLangParser.From, 0); }
+		public TerminalNode As() { return getToken(SantaLangParser.As, 0); }
 		public KeywordContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_keyword; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterKeyword(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterKeyword(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitKeyword(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitKeyword(this);
 		}
 	}
 
@@ -7061,7 +7064,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class GetterContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(JavaScriptParser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(SantaLangParser.Identifier, 0); }
 		public PropertyNameContext propertyName() {
 			return getRuleContext(PropertyNameContext.class,0);
 		}
@@ -7071,11 +7074,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_getter; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterGetter(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterGetter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitGetter(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitGetter(this);
 		}
 	}
 
@@ -7105,7 +7108,7 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class SetterContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(JavaScriptParser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(SantaLangParser.Identifier, 0); }
 		public PropertyNameContext propertyName() {
 			return getRuleContext(PropertyNameContext.class,0);
 		}
@@ -7115,11 +7118,11 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 		@Override public int getRuleIndex() { return RULE_setter; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterSetter(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterSetter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitSetter(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitSetter(this);
 		}
 	}
 
@@ -7149,19 +7152,19 @@ public class JavaScriptParser extends JavaScriptBaseParser {
 	}
 
 	public static class EosContext extends ParserRuleContext {
-		public TerminalNode SemiColon() { return getToken(JavaScriptParser.SemiColon, 0); }
-		public TerminalNode EOF() { return getToken(EOF, 0); }
+		public TerminalNode SemiColon() { return getToken(SantaLangParser.SemiColon, 0); }
+		public TerminalNode EOF() { return getToken(SantaLangParser.EOF, 0); }
 		public EosContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_eos; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).enterEos(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).enterEos(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof JavaScriptParserListener ) ((JavaScriptParserListener)listener).exitEos(this);
+			if ( listener instanceof SantaLangParserListener ) ((SantaLangParserListener)listener).exitEos(this);
 		}
 	}
 

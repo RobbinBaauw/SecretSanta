@@ -28,7 +28,7 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  * OTHER DEALINGS IN THE SOFTWARE.
  */
-lexer grammar JavaScriptLexer;
+lexer grammar SantaLangLexer;
 
 @lexer::header {
     package nl.santa.grammar;
@@ -36,7 +36,7 @@ lexer grammar JavaScriptLexer;
 
 channels { ERROR }
 
-options { superClass=JavaScriptBaseLexer; }
+options { superClass=SantaLangBaseLexer; }
 
 HashBangLine:                   { this.IsStartOfFile()}? '#!' ~[\r\n\u2028\u2029]*; // only allowed at start
 MultiLineComment:               '/*' .*? '*/'             -> channel(HIDDEN);

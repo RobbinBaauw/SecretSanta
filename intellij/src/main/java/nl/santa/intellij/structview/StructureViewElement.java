@@ -3,23 +3,22 @@ package nl.santa.intellij.structview;
 import com.intellij.ide.structureView.StructureViewTreeElement;
 import com.intellij.ide.util.treeView.smartTree.SortableTreeElement;
 import com.intellij.ide.util.treeView.smartTree.TreeElement;
-import com.intellij.navigation.ItemPresentation;
 import com.intellij.navigation.NavigationItem;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiNamedElement;
 import org.antlr.intellij.adaptor.xpath.XPath;
-import nl.santa.intellij.SampleLanguage;
-import nl.santa.intellij.psi.SamplePSIFileRoot;
+import nl.santa.intellij.SantaLangLanguage;
+import nl.santa.intellij.psi.PSIFileRoot;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class SampleStructureViewElement implements StructureViewTreeElement, SortableTreeElement {
+public class StructureViewElement implements StructureViewTreeElement, SortableTreeElement {
 	protected final PsiElement element;
 
-	public SampleStructureViewElement(PsiElement element) {
+	public StructureViewElement(PsiElement element) {
 		this.element = element;
 	}
 
@@ -57,18 +56,18 @@ public class SampleStructureViewElement implements StructureViewTreeElement, Sor
 
 	@NotNull
 	@Override
-	public ItemPresentation getPresentation() {
-		return new SampleItemPresentation(element);
+	public com.intellij.navigation.ItemPresentation getPresentation() {
+		return new ItemPresentation(element);
 	}
 
 	@NotNull
 	@Override
 	public TreeElement[] getChildren() {
-		if ( element instanceof SamplePSIFileRoot ) {
-			Collection<? extends PsiElement> funcs = XPath.findAll(SampleLanguage.INSTANCE, element, "/script/function/ID");
+		if ( element instanceof PSIFileRoot) {
+			Collection<? extends PsiElement> funcs = XPath.findAll(SantaLangLanguage.INSTANCE, element, "/script/function/ID");
 			List<TreeElement> treeElements = new ArrayList<>(funcs.size());
 			for (PsiElement el : funcs) {
-				treeElements.add(new SampleStructureViewElement(el));
+				treeElements.add(new StructureViewElement(el));
 			}
 			return treeElements.toArray(new TreeElement[funcs.size()]);
 		}

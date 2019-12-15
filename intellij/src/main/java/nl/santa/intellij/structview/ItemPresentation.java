@@ -1,29 +1,31 @@
 package nl.santa.intellij.structview;
 
+import com.intellij.lang.ASTNode;
 import com.intellij.navigation.ItemPresentation;
-import com.intellij.psi.PsiFile;
+import com.intellij.psi.PsiElement;
 import nl.santa.intellij.Icons;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 
-public class SampleRootPresentation implements ItemPresentation {
-	protected final PsiFile element;
+public class ItemPresentation implements com.intellij.navigation.ItemPresentation {
+	protected final PsiElement element;
 
-	protected SampleRootPresentation(PsiFile element) {
+	protected ItemPresentation(PsiElement element) {
 		this.element = element;
 	}
 
 	@Nullable
 	@Override
 	public Icon getIcon(boolean unused) {
-		return Icons.SAMPLE_ICON;
+		return Icons.FUNC_ICON;
 	}
 
 	@Nullable
 	@Override
 	public String getPresentableText() {
-		return element.getVirtualFile().getNameWithoutExtension();
+		ASTNode node = element.getNode();
+		return node.getText();
 	}
 
 	@Nullable

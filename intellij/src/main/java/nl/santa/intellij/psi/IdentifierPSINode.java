@@ -8,8 +8,8 @@ import com.intellij.util.IncorrectOperationException;
 import org.antlr.intellij.adaptor.lexer.RuleIElementType;
 import org.antlr.intellij.adaptor.psi.ANTLRPsiLeafNode;
 import org.antlr.intellij.adaptor.psi.Trees;
-import nl.santa.intellij.SampleLanguage;
-import nl.santa.intellij.SampleParserDefinition;
+import nl.santa.intellij.SantaLangLanguage;
+import nl.santa.intellij.SantaLangParserDefinition;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 
@@ -72,10 +72,10 @@ public class IdentifierPSINode extends ANTLRPsiLeafNode implements PsiNamedEleme
 			                   kind+this+" at "+Integer.toHexString(this.hashCode()));
 		*/
 		PsiElement newID = Trees.createLeafFromText(getProject(),
-		                                            SampleLanguage.INSTANCE,
+		                                            SantaLangLanguage.INSTANCE,
 		                                            getContext(),
 		                                            name,
-		                                            SampleParserDefinition.ID);
+		                                            SantaLangParserDefinition.ID);
 		if ( newID!=null ) {
 			return this.replace(newID); // use replace on leaves but replaceChild on ID nodes that are part of defs/decls.
 		}

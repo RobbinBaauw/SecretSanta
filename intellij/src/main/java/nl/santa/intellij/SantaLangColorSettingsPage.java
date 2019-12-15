@@ -11,13 +11,13 @@ import org.jetbrains.annotations.Nullable;
 import javax.swing.*;
 import java.util.Map;
 
-public class SampleColorSettingsPage implements ColorSettingsPage {
+public class SantaLangColorSettingsPage implements ColorSettingsPage {
 	private static final AttributesDescriptor[] DESCRIPTORS = new AttributesDescriptor[]{
-		new AttributesDescriptor("Identifier", SampleSyntaxHighlighter.ID),
-		new AttributesDescriptor("Keyword", SampleSyntaxHighlighter.KEYWORD),
-		new AttributesDescriptor("String", SampleSyntaxHighlighter.STRING),
-		new AttributesDescriptor("Line comment", SampleSyntaxHighlighter.LINE_COMMENT),
-		new AttributesDescriptor("Block comment", SampleSyntaxHighlighter.BLOCK_COMMENT),
+		new AttributesDescriptor("Identifier", SantaLangSyntaxHighlighter.ID),
+		new AttributesDescriptor("Keyword", SantaLangSyntaxHighlighter.KEYWORD),
+		new AttributesDescriptor("String", SantaLangSyntaxHighlighter.STRING),
+		new AttributesDescriptor("Line comment", SantaLangSyntaxHighlighter.LINE_COMMENT),
+		new AttributesDescriptor("Block comment", SantaLangSyntaxHighlighter.BLOCK_COMMENT),
 	};
 
 	@Nullable
@@ -35,7 +35,7 @@ public class SampleColorSettingsPage implements ColorSettingsPage {
 	@NotNull
 	@Override
 	public SyntaxHighlighter getHighlighter() {
-		return new SampleSyntaxHighlighter();
+		return new SantaLangSyntaxHighlighter();
 	}
 
 	@NotNull

@@ -9,8 +9,8 @@ import org.antlr.intellij.adaptor.psi.ScopeNode;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public abstract class SampleElementRef extends PsiReferenceBase<IdentifierPSINode> {
-	public SampleElementRef(@NotNull IdentifierPSINode element) {
+public abstract class ElementRef extends PsiReferenceBase<IdentifierPSINode> {
+	public ElementRef(@NotNull IdentifierPSINode element) {
 		/** WARNING: You must send up the text range or you get this error:
 		 * "Cannot find manipulator for PsiElement(ID) in org.antlr.jetbrains.sample.SampleElementRef"...
 		 *  when you click on an identifier.  During rename you get this

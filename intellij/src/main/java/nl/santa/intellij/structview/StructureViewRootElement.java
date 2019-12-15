@@ -4,14 +4,14 @@ import com.intellij.navigation.ItemPresentation;
 import com.intellij.psi.PsiFile;
 import org.jetbrains.annotations.NotNull;
 
-public class SampleStructureViewRootElement extends SampleStructureViewElement {
-	public SampleStructureViewRootElement(PsiFile element) {
+public class StructureViewRootElement extends StructureViewElement {
+	public StructureViewRootElement(PsiFile element) {
 		super(element);
 	}
 
 	@NotNull
 	@Override
 	public ItemPresentation getPresentation() {
-		return new SampleRootPresentation((PsiFile)element);
+		return new RootPresentation((PsiFile)element);
 	}
 }

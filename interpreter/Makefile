@@ -10,4 +10,4 @@ antlr4-classpath = $(gradle-cache-antlr)/antlr4/4.7.1/51ef964b44323720bef371d569
 
 create-binary:
 	./gradlew compileKotlin compileJava && $(graal-native-image) -H:Class=nl.santa.interpreter.SantaKt -H:Name=santa \
-	-cp build/classes/kotlin/main:build/classes/java/main:$(kotlin-jars-classpath):$(kotlinx-jars-classpath):$(antlr4-classpath) --language:js --initialize-at-build-time
+	-cp build/classes/kotlin/main:build/classes/java/main:../grammar/build/classes/java/main:$(kotlin-jars-classpath):$(kotlinx-jars-classpath):$(antlr4-classpath) --language:js --initialize-at-build-time
