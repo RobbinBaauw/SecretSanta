@@ -2,76 +2,41 @@ package nl.santa
 
 import nl.santa.grammar.JavaScriptLexer
 import nl.santa.grammar.JavaScriptParser
-import org.antlr.v4.runtime.*
-import org.antlr.v4.runtime.atn.ATNConfigSet
-import org.antlr.v4.runtime.dfa.DFA
+import org.antlr.v4.runtime.CharStreams
+import org.antlr.v4.runtime.CommonTokenStream
 import org.graalvm.polyglot.Context
-import org.graalvm.polyglot.Value
-import java.io.BufferedReader
-import java.io.InputStreamReader
-import java.util.*
-import java.util.stream.Collectors
 
 fun main(args: Array<String>) {
 
-    val fileStream = CharStreams.fromFileName("test.js")
+    val fileName = parseCLI(args)
+    val fileStream = CharStreams.fromFileName(fileName)
 
     val lexer = JavaScriptLexer(fileStream)
     val tokenStream = CommonTokenStream(lexer)
+    val code = parseCode(tokenStream)
 
     val parser = JavaScriptParser(tokenStream)
     parser.removeErrorListeners()
-    parser.addErrorListener(object : ANTLRErrorListener {
-        override fun reportAttemptingFullContext(
-            recognizer: Parser?,
-            dfa: DFA?,
-            startIndex: Int,
-            stopIndex: Int,
-            conflictingAlts: BitSet?,
-            configs: ATNConfigSet?
-        ) {
-            println("SYNTAX ERROR")
-        }
+    parser.addErrorListener(ErrorListener)
+    parser.buildParseTree = true
 
-        override fun syntaxError(
-            recognizer: Recognizer<*, *>?,
-            offendingSymbol: Any?,
-            line: Int,
-            charPositionInLine: Int,
-            msg: String?,
-            e: RecognitionException?
-        ) {
-            println("SYNTAX ERROR")
-            error(msg ?: "")
-        }
+    if (!hasSyntaxErrors(parser)) {
+        execute(code)
+    } else {
+        System.err.println("Syntax error")
+    }
+}
 
-        override fun reportAmbiguity(
-            recognizer: Parser?,
-            dfa: DFA?,
-            startIndex: Int,
-            stopIndex: Int,
-            exact: Boolean,
-            ambigAlts: BitSet?,
-            configs: ATNConfigSet?
-        ) {
-            println("SYNTAX ERROR")
-        }
+fun hasSyntaxErrors(parser: JavaScriptParser): Boolean {
+    return try {
+        parser.program()
+        false
+    } catch (e: SyntaxError) {
+        true
+    }
+}
 
-        override fun reportContextSensitivity(
-            recognizer: Parser?,
-            dfa: DFA?,
-            startIndex: Int,
-            stopIndex: Int,
-            prediction: Int,
-            configs: ATNConfigSet?
-        ) {
-            println("SYNTAX ERROR")
-        }
-
-    })
-
-    val stat = parser.expressionStatement()
-
+fun parseCode(tokenStream: CommonTokenStream): String {
     val codeString = StringBuilder()
 
     var i = 1
@@ -84,7 +49,11 @@ fun main(args: Array<String>) {
         i++
     }
 
+    return codeString.toString()
+}
+
+fun execute(code: String) {
     Context.create("js").use { context ->
-        context.eval("js", codeString.toString())
+        context.eval("js", code)
     }
 }
