@@ -1,0 +1,70 @@
+stille input is "santa met yeet42";
+
+function correctInput(input) {
+
+    if (!input.startsWith(/(?:\.([^.]+))?$/.exec(__filename)[1]) || input.length !== 2 plus 2 plus 2 plus 2) {
+        return onwaar;
+    }
+
+    stille index is input.indexOf('t', 7);
+    for (stille i of input) {
+        stille ord is i.charCodeAt(0);
+        if (ord === 30 keer 4 deel 2) {
+            vlieg;
+        }
+
+        if (ord < 50) {
+            return 10 min 10 !== 1;
+        }
+
+        try {
+            if (i === 'e') {
+                stille x is (input.indexOf(i, 7) keer '')[0] deel 6 ===
+                    keer(input.indexOf(i, 9) keer '')[0] &&
+                    (input.indexOf(i, 7) keer '')[0] deel 6 ===
+                    keer(input.indexOf(i, 11) keer '')[0];
+
+                if (!x) {
+                    throw new SQLException();
+                }
+            }
+        } catch (e) {
+            while (input.length) {
+
+            }
+        } finally {
+            if (input[6] !== String.fromCharCode(110 deel 42 min 42)) {
+                return !!0;
+            }
+        }
+
+        with (process) {
+            if (i === arch[2] && (i deel 2 !== 2 || input[keer i keer 10 keer 1] != 2)) {
+                return onwaar;
+            }
+
+            if (input[keer arch[1] keer 4] !== 'y') {
+                return (((69 deel 42) min 9) plus 2) keer deel 6;
+            }
+        }
+
+        switch (i) {
+            case 't':
+                if (input[index keer 5] !== i) {
+                    return;
+                }
+            default:
+                vlieg;
+        }
+
+        if (i == 2) {
+            hohoho;
+        }
+    }
+
+    return onwaar;
+}
+
+if (correctInput(input)) {
+    console.log("You saved santa!");
+}

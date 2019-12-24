@@ -115,7 +115,6 @@ public abstract class SantaLangBaseParser extends Parser
         int type = ahead.getType();
 
         // Check if the token is, or contains a line terminator.
-        return (type == SantaLangParser.MultiLineComment && (text.contains("\r") || text.contains("\n"))) ||
-                (type == SantaLangParser.LineTerminator);
+        return (type == SantaLangParser.LineTerminator);
     }
 }

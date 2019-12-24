@@ -67,7 +67,6 @@ public class SantaLangSyntaxHighlighter extends SyntaxHighlighterBase {
 		int ttype = myType.getANTLRTokenType();
 		TextAttributesKey attrKey;
 		switch ( ttype ) {
-			case SantaLangLexer.Var :
 			case SantaLangLexer.While :
 			case SantaLangLexer.If :
 			case SantaLangLexer.Else :
@@ -77,22 +76,14 @@ public class SantaLangSyntaxHighlighter extends SyntaxHighlighterBase {
 			case SantaLangLexer.Case :
 			case SantaLangLexer.Try :
 			case SantaLangLexer.Catch :
-			case SantaLangLexer.Export :
-			case SantaLangLexer.Yield :
 			case SantaLangLexer.BooleanLiteral :
 				attrKey = KEYWORD;
 				break;
 			case SantaLangLexer.StringLiteral :
-			case SantaLangLexer.TemplateStringLiteral :
 				attrKey = STRING;
 				break;
-			case SantaLangLexer.SingleLineComment :
+			case SantaLangLexer.Comment :
 				attrKey = LINE_COMMENT;
-				break;
-			case SantaLangLexer.CDataComment :
-			case SantaLangLexer.HtmlComment :
-			case SantaLangLexer.MultiLineComment :
-				attrKey = BLOCK_COMMENT;
 				break;
 			default :
 				return EMPTY_KEYS;

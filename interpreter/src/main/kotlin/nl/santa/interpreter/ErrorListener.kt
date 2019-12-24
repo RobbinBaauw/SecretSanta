@@ -8,7 +8,7 @@ import org.antlr.v4.runtime.atn.ATNConfigSet
 import org.antlr.v4.runtime.dfa.DFA
 import java.util.*
 
-class SyntaxError(msg: String) : Exception(msg)
+class SantaError(val santaMsg: String) : Exception(santaMsg)
 
 object ErrorListener : ANTLRErrorListener {
     override fun reportAttemptingFullContext(
@@ -30,7 +30,7 @@ object ErrorListener : ANTLRErrorListener {
         msg: String?,
         e: RecognitionException?
     ) {
-        throw SyntaxError("SYNTAX ERROR: ${msg ?: ""}")
+        throw SantaError("Syntax error: ${msg ?: ""}")
     }
 
     override fun reportAmbiguity(

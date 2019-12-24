@@ -78,126 +78,6 @@ public class SantaLangParserBaseListener implements SantaLangParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterImportStatement(SantaLangParser.ImportStatementContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitImportStatement(SantaLangParser.ImportStatementContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterImportFromBlock(SantaLangParser.ImportFromBlockContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitImportFromBlock(SantaLangParser.ImportFromBlockContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterModuleItems(SantaLangParser.ModuleItemsContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitModuleItems(SantaLangParser.ModuleItemsContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterImportDefault(SantaLangParser.ImportDefaultContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitImportDefault(SantaLangParser.ImportDefaultContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterImportNamespace(SantaLangParser.ImportNamespaceContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitImportNamespace(SantaLangParser.ImportNamespaceContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterImportFrom(SantaLangParser.ImportFromContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitImportFrom(SantaLangParser.ImportFromContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterAliasName(SantaLangParser.AliasNameContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitAliasName(SantaLangParser.AliasNameContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExportDeclaration(SantaLangParser.ExportDeclarationContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExportDeclaration(SantaLangParser.ExportDeclarationContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExportDefaultDeclaration(SantaLangParser.ExportDefaultDeclarationContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExportDefaultDeclaration(SantaLangParser.ExportDefaultDeclarationContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterExportFromBlock(SantaLangParser.ExportFromBlockContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExportFromBlock(SantaLangParser.ExportFromBlockContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterDeclaration(SantaLangParser.DeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -390,18 +270,6 @@ public class SantaLangParserBaseListener implements SantaLangParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterYieldStatement(SantaLangParser.YieldStatementContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitYieldStatement(SantaLangParser.YieldStatementContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterWithStatement(SantaLangParser.WithStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -553,42 +421,6 @@ public class SantaLangParserBaseListener implements SantaLangParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFunctionDeclaration(SantaLangParser.FunctionDeclarationContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterClassDeclaration(SantaLangParser.ClassDeclarationContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitClassDeclaration(SantaLangParser.ClassDeclarationContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterClassTail(SantaLangParser.ClassTailContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitClassTail(SantaLangParser.ClassTailContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterClassElement(SantaLangParser.ClassElementContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitClassElement(SantaLangParser.ClassElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -829,18 +661,6 @@ public class SantaLangParserBaseListener implements SantaLangParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitExpressionSequence(SantaLangParser.ExpressionSequenceContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterTemplateStringExpression(SantaLangParser.TemplateStringExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTemplateStringExpression(SantaLangParser.TemplateStringExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1098,18 +918,6 @@ public class SantaLangParserBaseListener implements SantaLangParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterImportExpression(SantaLangParser.ImportExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitImportExpression(SantaLangParser.ImportExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterEqualityExpression(SantaLangParser.EqualityExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -1129,18 +937,6 @@ public class SantaLangParserBaseListener implements SantaLangParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBitXOrExpression(SantaLangParser.BitXOrExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterSuperExpression(SantaLangParser.SuperExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitSuperExpression(SantaLangParser.SuperExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1218,18 +1014,6 @@ public class SantaLangParserBaseListener implements SantaLangParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterYieldExpression(SantaLangParser.YieldExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitYieldExpression(SantaLangParser.YieldExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterBitNotExpression(SantaLangParser.BitNotExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -1290,18 +1074,6 @@ public class SantaLangParserBaseListener implements SantaLangParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterClassExpression(SantaLangParser.ClassExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitClassExpression(SantaLangParser.ClassExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterMemberIndexExpression(SantaLangParser.MemberIndexExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -1357,18 +1129,6 @@ public class SantaLangParserBaseListener implements SantaLangParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAssignmentOperatorExpression(SantaLangParser.AssignmentOperatorExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterVoidExpression(SantaLangParser.VoidExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitVoidExpression(SantaLangParser.VoidExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1477,6 +1237,18 @@ public class SantaLangParserBaseListener implements SantaLangParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLiteral(SantaLangParser.LiteralContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBooleanLiteral(SantaLangParser.BooleanLiteralContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBooleanLiteral(SantaLangParser.BooleanLiteralContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

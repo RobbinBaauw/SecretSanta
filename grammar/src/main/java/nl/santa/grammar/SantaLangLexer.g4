@@ -38,10 +38,118 @@ channels { ERROR }
 
 options { superClass=SantaLangBaseLexer; }
 
+// Illegals
+IllegalKeyword
+    : TransformedKeyword
+    | DeletedKeyword
+    ;
+
+/// Transforms
+TransformedKeyword
+    : OrigNullLiteral
+    | OrigTrueLiteral
+    | OrigFalseLiteral
+    | OrigPlusLiteral
+    | OrigMinusLiteral
+    | OrigMultiplyLiteral
+    | OrigDivideLiteral
+    | OrigConst
+    | OrigAssign
+    | OrigBreak
+    | OrigContinue
+    ;
+
+OrigNullLiteral:                'null';
+OrigTrueLiteral:                'true';
+OrigFalseLiteral:               'false';
+OrigPlusLiteral:                '+';
+OrigMinusLiteral:               '-';
+OrigMultiplyLiteral:            '*';
+OrigDivideLiteral:              '/';
+OrigConst:                      'const';
+OrigAssign:                     '=';
+OrigBreak:                      'break';
+OrigContinue:                   'continue';
+
+/// Deletions
+DeletedKeyword
+    : HashBangLine
+    | MultiLineComment
+    | SingleLineComment
+    | Var
+    | Void
+    | Class
+    | Enum
+    | Extends
+    | Super
+    | Export
+    | Import
+    | Implements
+    | Let
+    | Private
+    | Public
+    | Interface
+    | Package
+    | Protected
+    | Static
+    | Yield
+    | As
+    | From
+    | TemplateStringLiteral
+    | HtmlComment
+    | CDataComment
+    ;
+
 HashBangLine:                   { this.IsStartOfFile()}? '#!' ~[\r\n\u2028\u2029]*; // only allowed at start
 MultiLineComment:               '/*' .*? '*/'             -> channel(HIDDEN);
 SingleLineComment:              '//' ~[\r\n\u2028\u2029]* -> channel(HIDDEN);
+Var:                            'var';
+Void:                           'void';
+Class:                          'class';
+Enum:                           'enum';
+Extends:                        'extends';
+Super:                          'super';
+Export:                         'export';
+Import:                         'import';
+Implements:                     'implements' {this.IsStrictMode()}?;
+Let:                            'let' {this.IsStrictMode()}?;
+Private:                        'private' {this.IsStrictMode()}?;
+Public:                         'public' {this.IsStrictMode()}?;
+Interface:                      'interface' {this.IsStrictMode()}?;
+Package:                        'package' {this.IsStrictMode()}?;
+Protected:                      'protected' {this.IsStrictMode()}?;
+Static:                         'static' {this.IsStrictMode()}?;
+Yield:                          'yield' {this.IsStrictMode()}?;
+As:                             'as';
+From:                           'from';
+TemplateStringLiteral:          '`' ('\\`' | ~'`')* '`';
+HtmlComment:                    '<!--' .*? '-->' -> channel(HIDDEN);
+CDataComment:                   '<![CDATA[' .*? ']]>' -> channel(HIDDEN);
+
+
+
+// Valids
 RegularExpressionLiteral:       '/' RegularExpressionFirstChar RegularExpressionChar* {this.IsRegexPossible()}? '/' IdentifierPart*;
+
+fragment RegularExpressionFirstChar
+    : ~[*\r\n\u2028\u2029\\/[]
+    | RegularExpressionBackslashSequence
+    | '[' RegularExpressionClassChar* ']'
+    ;
+fragment RegularExpressionChar
+    : ~[\r\n\u2028\u2029\\/[]
+    | RegularExpressionBackslashSequence
+    | '[' RegularExpressionClassChar* ']'
+    ;
+fragment RegularExpressionClassChar
+    : ~[\r\n\u2028\u2029\]\\]
+    | RegularExpressionBackslashSequence
+    ;
+fragment RegularExpressionBackslashSequence
+    : '\\' ~[\r\n\u2028\u2029]
+    ;
+
+Comment:              '//' ~[\r\n\u2028\u2029]* -> channel(HIDDEN);
 
 OpenBracket:                    '[';
 CloseBracket:                   ']';
@@ -51,19 +159,19 @@ OpenBrace:                      '{' {this.ProcessOpenBrace();};
 CloseBrace:                     '}' {this.ProcessCloseBrace();};
 SemiColon:                      ';';
 Comma:                          ',';
-Assign:                         '=';
+Assign:                         'is';
 QuestionMark:                   '?';
 Colon:                          ':';
 Ellipsis:                       '...';
 Dot:                            '.';
 PlusPlus:                       '++';
 MinusMinus:                     '--';
-Plus:                           '+';
-Minus:                          '-';
+Plus:                           'keer';
+Minus:                          'deel';
 BitNot:                         '~';
 Not:                            '!';
-Multiply:                       '*';
-Divide:                         '/';
+Multiply:                       'plus';
+Divide:                         'min';
 Modulus:                        '%';
 Power:                          '**';
 NullCoalesce:                   '??';
@@ -100,12 +208,12 @@ ARROW:                          '=>';
 
 /// Null Literals
 
-NullLiteral:                    'null';
+NullLiteral:                    'niks';
 
 /// Boolean Literals
 
-BooleanLiteral:                 'true'
-              |                 'false';
+TrueLiteral:                    'onwaar';
+FalseLiteral:                   'waar';
 
 /// Numeric Literals
 
@@ -128,19 +236,17 @@ BigDecimalIntegerLiteral:       DecimalIntegerLiteral 'n';
 
 /// Keywords
 
-Break:                          'break';
+Break:                          'hohoho';
 Do:                             'do';
 Instanceof:                     'instanceof';
 Typeof:                         'typeof';
 Case:                           'case';
 Else:                           'else';
 New:                            'new';
-Var:                            'var';
 Catch:                          'catch';
 Finally:                        'finally';
 Return:                         'return';
-Void:                           'void';
-Continue:                       'continue';
+Continue:                       'vlieg';
 For:                            'for';
 Switch:                         'switch';
 While:                          'while';
@@ -154,34 +260,13 @@ Throw:                          'throw';
 Delete:                         'delete';
 In:                             'in';
 Try:                            'try';
-As:                             'as';
-From:                           'from';
 
 /// Future Reserved Words
 
-Class:                          'class';
-Enum:                           'enum';
-Extends:                        'extends';
-Super:                          'super';
-Const:                          'const';
-Export:                         'export';
-Import:                         'import';
+Const:                          'stille';
 
 Async:                          'async';
 Await:                          'await';
-
-/// The following tokens are also considered to be FutureReservedWords
-/// when parsing strict mode
-
-Implements:                     'implements' {this.IsStrictMode()}?;
-Let:                            'let' {this.IsStrictMode()}?;
-Private:                        'private' {this.IsStrictMode()}?;
-Public:                         'public' {this.IsStrictMode()}?;
-Interface:                      'interface' {this.IsStrictMode()}?;
-Package:                        'package' {this.IsStrictMode()}?;
-Protected:                      'protected' {this.IsStrictMode()}?;
-Static:                         'static' {this.IsStrictMode()}?;
-Yield:                          'yield' {this.IsStrictMode()}?;
 
 /// Identifier Names and Identifiers
 
@@ -191,18 +276,11 @@ StringLiteral:                 ('"' DoubleStringCharacter* '"'
              |                  '\'' SingleStringCharacter* '\'') {this.ProcessStringLiteral();}
              ;
 
-// TODO: `${`tmp`}`
-TemplateStringLiteral:          '`' ('\\`' | ~'`')* '`';
-
 WhiteSpaces:                    [\t\u000B\u000C\u0020\u00A0]+ -> channel(HIDDEN);
 
 LineTerminator:                 [\r\n\u2028\u2029] -> channel(HIDDEN);
 
 /// Comments
-
-
-HtmlComment:                    '<!--' .*? '-->' -> channel(HIDDEN);
-CDataComment:                   '<![CDATA[' .*? ']]>' -> channel(HIDDEN);
 UnexpectedCharacter:            . -> channel(ERROR);
 
 // Fragment rules
@@ -687,25 +765,4 @@ fragment UnicodeConnectorPunctuation
     | [\uFE4D-\uFE4F]
     | [\uFF3F]
     | [\uFF65]
-    ;
-
-fragment RegularExpressionFirstChar
-    : ~[*\r\n\u2028\u2029\\/[]
-    | RegularExpressionBackslashSequence
-    | '[' RegularExpressionClassChar* ']'
-    ;
-
-fragment RegularExpressionChar
-    : ~[\r\n\u2028\u2029\\/[]
-    | RegularExpressionBackslashSequence
-    | '[' RegularExpressionClassChar* ']'
-    ;
-
-fragment RegularExpressionClassChar
-    : ~[\r\n\u2028\u2029\]\\]
-    | RegularExpressionBackslashSequence
-    ;
-
-fragment RegularExpressionBackslashSequence
-    : '\\' ~[\r\n\u2028\u2029]
     ;

@@ -60,110 +60,6 @@ public interface SantaLangParserListener extends ParseTreeListener {
 	 */
 	void exitStatementList(SantaLangParser.StatementListContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SantaLangParser#importStatement}.
-	 * @param ctx the parse tree
-	 */
-	void enterImportStatement(SantaLangParser.ImportStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SantaLangParser#importStatement}.
-	 * @param ctx the parse tree
-	 */
-	void exitImportStatement(SantaLangParser.ImportStatementContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SantaLangParser#importFromBlock}.
-	 * @param ctx the parse tree
-	 */
-	void enterImportFromBlock(SantaLangParser.ImportFromBlockContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SantaLangParser#importFromBlock}.
-	 * @param ctx the parse tree
-	 */
-	void exitImportFromBlock(SantaLangParser.ImportFromBlockContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SantaLangParser#moduleItems}.
-	 * @param ctx the parse tree
-	 */
-	void enterModuleItems(SantaLangParser.ModuleItemsContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SantaLangParser#moduleItems}.
-	 * @param ctx the parse tree
-	 */
-	void exitModuleItems(SantaLangParser.ModuleItemsContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SantaLangParser#importDefault}.
-	 * @param ctx the parse tree
-	 */
-	void enterImportDefault(SantaLangParser.ImportDefaultContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SantaLangParser#importDefault}.
-	 * @param ctx the parse tree
-	 */
-	void exitImportDefault(SantaLangParser.ImportDefaultContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SantaLangParser#importNamespace}.
-	 * @param ctx the parse tree
-	 */
-	void enterImportNamespace(SantaLangParser.ImportNamespaceContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SantaLangParser#importNamespace}.
-	 * @param ctx the parse tree
-	 */
-	void exitImportNamespace(SantaLangParser.ImportNamespaceContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SantaLangParser#importFrom}.
-	 * @param ctx the parse tree
-	 */
-	void enterImportFrom(SantaLangParser.ImportFromContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SantaLangParser#importFrom}.
-	 * @param ctx the parse tree
-	 */
-	void exitImportFrom(SantaLangParser.ImportFromContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SantaLangParser#aliasName}.
-	 * @param ctx the parse tree
-	 */
-	void enterAliasName(SantaLangParser.AliasNameContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SantaLangParser#aliasName}.
-	 * @param ctx the parse tree
-	 */
-	void exitAliasName(SantaLangParser.AliasNameContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code ExportDeclaration}
-	 * labeled alternative in {@link SantaLangParser#exportStatement}.
-	 * @param ctx the parse tree
-	 */
-	void enterExportDeclaration(SantaLangParser.ExportDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code ExportDeclaration}
-	 * labeled alternative in {@link SantaLangParser#exportStatement}.
-	 * @param ctx the parse tree
-	 */
-	void exitExportDeclaration(SantaLangParser.ExportDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code ExportDefaultDeclaration}
-	 * labeled alternative in {@link SantaLangParser#exportStatement}.
-	 * @param ctx the parse tree
-	 */
-	void enterExportDefaultDeclaration(SantaLangParser.ExportDefaultDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code ExportDefaultDeclaration}
-	 * labeled alternative in {@link SantaLangParser#exportStatement}.
-	 * @param ctx the parse tree
-	 */
-	void exitExportDefaultDeclaration(SantaLangParser.ExportDefaultDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SantaLangParser#exportFromBlock}.
-	 * @param ctx the parse tree
-	 */
-	void enterExportFromBlock(SantaLangParser.ExportFromBlockContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SantaLangParser#exportFromBlock}.
-	 * @param ctx the parse tree
-	 */
-	void exitExportFromBlock(SantaLangParser.ExportFromBlockContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link SantaLangParser#declaration}.
 	 * @param ctx the parse tree
 	 */
@@ -334,16 +230,6 @@ public interface SantaLangParserListener extends ParseTreeListener {
 	 */
 	void exitReturnStatement(SantaLangParser.ReturnStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SantaLangParser#yieldStatement}.
-	 * @param ctx the parse tree
-	 */
-	void enterYieldStatement(SantaLangParser.YieldStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SantaLangParser#yieldStatement}.
-	 * @param ctx the parse tree
-	 */
-	void exitYieldStatement(SantaLangParser.YieldStatementContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link SantaLangParser#withStatement}.
 	 * @param ctx the parse tree
 	 */
@@ -473,36 +359,6 @@ public interface SantaLangParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitFunctionDeclaration(SantaLangParser.FunctionDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SantaLangParser#classDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterClassDeclaration(SantaLangParser.ClassDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SantaLangParser#classDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitClassDeclaration(SantaLangParser.ClassDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SantaLangParser#classTail}.
-	 * @param ctx the parse tree
-	 */
-	void enterClassTail(SantaLangParser.ClassTailContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SantaLangParser#classTail}.
-	 * @param ctx the parse tree
-	 */
-	void exitClassTail(SantaLangParser.ClassTailContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SantaLangParser#classElement}.
-	 * @param ctx the parse tree
-	 */
-	void enterClassElement(SantaLangParser.ClassElementContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SantaLangParser#classElement}.
-	 * @param ctx the parse tree
-	 */
-	void exitClassElement(SantaLangParser.ClassElementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SantaLangParser#methodDefinition}.
 	 * @param ctx the parse tree
@@ -715,18 +571,6 @@ public interface SantaLangParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitExpressionSequence(SantaLangParser.ExpressionSequenceContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code TemplateStringExpression}
-	 * labeled alternative in {@link SantaLangParser#singleExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterTemplateStringExpression(SantaLangParser.TemplateStringExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code TemplateStringExpression}
-	 * labeled alternative in {@link SantaLangParser#singleExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitTemplateStringExpression(SantaLangParser.TemplateStringExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code TernaryExpression}
 	 * labeled alternative in {@link SantaLangParser#singleExpression}.
@@ -980,18 +824,6 @@ public interface SantaLangParserListener extends ParseTreeListener {
 	 */
 	void exitDeleteExpression(SantaLangParser.DeleteExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code ImportExpression}
-	 * labeled alternative in {@link SantaLangParser#singleExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterImportExpression(SantaLangParser.ImportExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code ImportExpression}
-	 * labeled alternative in {@link SantaLangParser#singleExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitImportExpression(SantaLangParser.ImportExpressionContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code EqualityExpression}
 	 * labeled alternative in {@link SantaLangParser#singleExpression}.
 	 * @param ctx the parse tree
@@ -1015,18 +847,6 @@ public interface SantaLangParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBitXOrExpression(SantaLangParser.BitXOrExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code SuperExpression}
-	 * labeled alternative in {@link SantaLangParser#singleExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterSuperExpression(SantaLangParser.SuperExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code SuperExpression}
-	 * labeled alternative in {@link SantaLangParser#singleExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitSuperExpression(SantaLangParser.SuperExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code MultiplicativeExpression}
 	 * labeled alternative in {@link SantaLangParser#singleExpression}.
@@ -1100,18 +920,6 @@ public interface SantaLangParserListener extends ParseTreeListener {
 	 */
 	void exitPostIncrementExpression(SantaLangParser.PostIncrementExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code YieldExpression}
-	 * labeled alternative in {@link SantaLangParser#singleExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterYieldExpression(SantaLangParser.YieldExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code YieldExpression}
-	 * labeled alternative in {@link SantaLangParser#singleExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitYieldExpression(SantaLangParser.YieldExpressionContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code BitNotExpression}
 	 * labeled alternative in {@link SantaLangParser#singleExpression}.
 	 * @param ctx the parse tree
@@ -1172,18 +980,6 @@ public interface SantaLangParserListener extends ParseTreeListener {
 	 */
 	void exitMemberDotExpression(SantaLangParser.MemberDotExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code ClassExpression}
-	 * labeled alternative in {@link SantaLangParser#singleExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterClassExpression(SantaLangParser.ClassExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code ClassExpression}
-	 * labeled alternative in {@link SantaLangParser#singleExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitClassExpression(SantaLangParser.ClassExpressionContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code MemberIndexExpression}
 	 * labeled alternative in {@link SantaLangParser#singleExpression}.
 	 * @param ctx the parse tree
@@ -1243,18 +1039,6 @@ public interface SantaLangParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAssignmentOperatorExpression(SantaLangParser.AssignmentOperatorExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code VoidExpression}
-	 * labeled alternative in {@link SantaLangParser#singleExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterVoidExpression(SantaLangParser.VoidExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code VoidExpression}
-	 * labeled alternative in {@link SantaLangParser#singleExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitVoidExpression(SantaLangParser.VoidExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code CoalesceExpression}
 	 * labeled alternative in {@link SantaLangParser#singleExpression}.
@@ -1353,6 +1137,16 @@ public interface SantaLangParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLiteral(SantaLangParser.LiteralContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SantaLangParser#booleanLiteral}.
+	 * @param ctx the parse tree
+	 */
+	void enterBooleanLiteral(SantaLangParser.BooleanLiteralContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SantaLangParser#booleanLiteral}.
+	 * @param ctx the parse tree
+	 */
+	void exitBooleanLiteral(SantaLangParser.BooleanLiteralContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SantaLangParser#numericLiteral}.
 	 * @param ctx the parse tree

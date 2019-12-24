@@ -5,38 +5,35 @@ import nl.santa.grammar.SantaLangParser
 import org.antlr.v4.runtime.CharStreams
 import org.antlr.v4.runtime.CommonTokenStream
 import org.graalvm.polyglot.Context
+import org.graalvm.polyglot.Language
 
 fun main(args: Array<String>) {
 
-    val fileName = parseCLI(args)
-    val fileStream = CharStreams.fromFileName(fileName)
+    try {
+        val fileName = parseCLI(args)
+        val fileStream = CharStreams.fromFileName(fileName)
 
-    val lexer = SantaLangLexer(fileStream)
-    val tokenStream = CommonTokenStream(lexer)
-    val code = parseCode(tokenStream)
+        val lexer = SantaLangLexer(fileStream)
+        val tokenStream = CommonTokenStream(lexer)
+        val code = parseCode(fileName, tokenStream)
 
-    val parser = SantaLangParser(tokenStream)
-    parser.removeErrorListeners()
-    parser.addErrorListener(ErrorListener)
-    parser.buildParseTree = true
+        val parser = SantaLangParser(tokenStream)
+        parser.removeErrorListeners()
+        parser.addErrorListener(ErrorListener)
+        parser.buildParseTree = true
 
-    if (!hasSyntaxErrors(parser)) {
+//        parser.program()
+
         execute(code)
-    } else {
-        System.err.println("Syntax error")
+    } catch (e: SantaError) {
+        System.err.println(e.santaMsg)
+    } catch (e: Exception) {
+        System.err.println("An error occurred!")
+        System.err.println(e.message)
     }
 }
 
-fun hasSyntaxErrors(parser: SantaLangParser): Boolean {
-    return try {
-        parser.program()
-        false
-    } catch (e: SyntaxError) {
-        true
-    }
-}
-
-fun parseCode(tokenStream: CommonTokenStream): String {
+fun parseCode(fileName: String, tokenStream: CommonTokenStream): String {
     val codeString = StringBuilder()
 
     var i = 1
@@ -45,11 +42,29 @@ fun parseCode(tokenStream: CommonTokenStream): String {
             break
         }
 
-        codeString.append(tokenStream.LT(i).text.toString() + " ")
+        codeString
+            .append(when (tokenStream.LA(i)) {
+                SantaLangLexer.IllegalKeyword -> throw SantaError("Syntax error, illegal keyword, curr string $codeString")
+                SantaLangLexer.TrueLiteral -> "true"
+                SantaLangLexer.FalseLiteral -> "false"
+                SantaLangLexer.Plus -> "+"
+                SantaLangLexer.Minus -> "-"
+                SantaLangLexer.Multiply -> "*"
+                SantaLangLexer.Divide -> "/"
+                SantaLangLexer.Const -> "const"
+                SantaLangLexer.Assign -> "="
+                else -> tokenStream.LT(i).text.toString()
+            })
+            .append(" ")
+
         i++
     }
 
-    return codeString.toString()
+    return """
+        const __filename = "$fileName";
+        
+        $codeString
+    """.trimIndent()
 }
 
 fun execute(code: String) {

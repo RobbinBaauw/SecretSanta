@@ -40,7 +40,7 @@ options {
 }
 
 program
-    : HashBangLine? sourceElements? EOF
+    : sourceElements? EOF
     ;
 
 sourceElement
@@ -50,17 +50,13 @@ sourceElement
 statement
     : block
     | variableStatement
-    | importStatement
-    | exportStatement
     | emptyStatement
-    | classDeclaration
     | expressionStatement
     | ifStatement
     | iterationStatement
     | continueStatement
     | breakStatement
     | returnStatement
-    | yieldStatement
     | withStatement
     | labelledStatement
     | switchStatement
@@ -78,48 +74,8 @@ statementList
     : statement+
     ;
 
-importStatement
-    : Import importFromBlock
-    ;
-
-importFromBlock
-    : importDefault? (importNamespace | moduleItems) importFrom eos
-    | StringLiteral eos
-    ;
-
-moduleItems
-    : '{' (aliasName ',')* (aliasName ','?)? '}'
-    ;
-
-importDefault
-    : aliasName ','
-    ;
-
-importNamespace
-    : '*' (As identifierName)?
-    ;
-
-importFrom
-    : From StringLiteral
-    ;
-
-aliasName
-    : identifierName (As identifierName )?
-    ;
-
-exportStatement
-    : Export (exportFromBlock | declaration) eos    # ExportDeclaration
-    | Export Default singleExpression eos           # ExportDefaultDeclaration
-    ;
-
-exportFromBlock
-    : importNamespace importFrom eos
-    | moduleItems importFrom? eos
-    ;
-
 declaration
     : variableStatement
-    | classDeclaration
     | functionDeclaration
     ;
 
@@ -132,7 +88,7 @@ variableDeclarationList
     ;
 
 variableDeclaration
-    : assignable ('=' singleExpression)? // ECMAScript 6: Array & Object Matching
+    : assignable ('is' singleExpression)? // ECMAScript 6: Array & Object Matching
     ;
 
 emptyStatement
@@ -158,9 +114,7 @@ iterationStatement
     ;
 
 varModifier  // let, const - ECMAScript 6
-    : Var
-    | Let
-    | Const
+    : Const
     ;
 
 continueStatement
@@ -173,10 +127,6 @@ breakStatement
 
 returnStatement
     : Return ({this.notLineTerminator()}? expressionSequence)? eos
-    ;
-
-yieldStatement
-    : Yield ({this.notLineTerminator()}? expressionSequence)? eos
     ;
 
 withStatement
@@ -231,20 +181,6 @@ functionDeclaration
     : Async? Function '*'? Identifier '(' formalParameterList? ')' '{' functionBody '}'
     ;
 
-classDeclaration
-    : Class Identifier classTail
-    ;
-
-classTail
-    : (Extends singleExpression)? '{' classElement* '}'
-    ;
-
-classElement
-    : (Static | {this.n("static")}? Identifier | Async)* methodDefinition
-    | emptyStatement
-    | '#'? propertyName '=' singleExpression
-    ;
-
 methodDefinition
     : '*'? '#'? propertyName '(' formalParameterList? ')' '{' functionBody '}'
     | '*'? '#'? getter '(' ')' '{' functionBody '}'
@@ -257,7 +193,7 @@ formalParameterList
     ;
 
 formalParameterArg
-    : assignable ('=' singleExpression)?      // ECMAScript 6: Initialization
+    : assignable ('is' singleExpression)?      // ECMAScript 6: Initialization
     ;
 
 lastFormalParameterArg                        // ECMAScript 6: Rest Parameter
@@ -318,7 +254,6 @@ expressionSequence
 
 singleExpression
     : anoymousFunction                                                      # FunctionExpression
-    | Class Identifier? classTail                                           # ClassExpression
     | singleExpression '[' expressionSequence ']'                           # MemberIndexExpression
     | singleExpression '?'? '.' '#'? identifierName                         # MemberDotExpression
     | singleExpression arguments                                            # ArgumentsExpression
@@ -327,18 +262,17 @@ singleExpression
     | singleExpression {this.notLineTerminator()}? '++'                     # PostIncrementExpression
     | singleExpression {this.notLineTerminator()}? '--'                     # PostDecreaseExpression
     | Delete singleExpression                                               # DeleteExpression
-    | Void singleExpression                                                 # VoidExpression
     | Typeof singleExpression                                               # TypeofExpression
     | '++' singleExpression                                                 # PreIncrementExpression
     | '--' singleExpression                                                 # PreDecreaseExpression
-    | '+' singleExpression                                                  # UnaryPlusExpression
-    | '-' singleExpression                                                  # UnaryMinusExpression
+    | 'keer' singleExpression                                                  # UnaryPlusExpression
+    | 'deel' singleExpression                                                  # UnaryMinusExpression
     | '~' singleExpression                                                  # BitNotExpression
     | '!' singleExpression                                                  # NotExpression
     | Await singleExpression                                                # AwaitExpression
     | <assoc=right> singleExpression '**' singleExpression                  # PowerExpression
-    | singleExpression ('*' | '/' | '%') singleExpression                   # MultiplicativeExpression
-    | singleExpression ('+' | '-') singleExpression                         # AdditiveExpression
+    | singleExpression ('plus' | 'min' | '%') singleExpression                   # MultiplicativeExpression
+    | singleExpression ('keer' | 'deel') singleExpression                         # AdditiveExpression
     | singleExpression '??' singleExpression                                # CoalesceExpression
     | singleExpression ('<<' | '>>' | '>>>') singleExpression               # BitShiftExpression
     | singleExpression ('<' | '>' | '<=' | '>=') singleExpression           # RelationalExpression
@@ -351,14 +285,10 @@ singleExpression
     | singleExpression '&&' singleExpression                                # LogicalAndExpression
     | singleExpression '||' singleExpression                                # LogicalOrExpression
     | singleExpression '?' singleExpression ':' singleExpression            # TernaryExpression
-    | <assoc=right> singleExpression '=' singleExpression                   # AssignmentExpression
+    | <assoc=right> singleExpression 'is' singleExpression                   # AssignmentExpression
     | <assoc=right> singleExpression assignmentOperator singleExpression    # AssignmentOperatorExpression
-    | Import '(' singleExpression ')'                                       # ImportExpression
-    | singleExpression TemplateStringLiteral                                # TemplateStringExpression  // ECMAScript 6
-    | yieldStatement                                                        # YieldExpression // ECMAScript 6
     | This                                                                  # ThisExpression
     | Identifier                                                            # IdentifierExpression
-    | Super                                                                 # SuperExpression
     | literal                                                               # LiteralExpression
     | arrayLiteral                                                          # ArrayLiteralExpression
     | objectLiteral                                                         # ObjectLiteralExpression
@@ -404,12 +334,15 @@ assignmentOperator
 
 literal
     : NullLiteral
-    | BooleanLiteral
+    | booleanLiteral
     | StringLiteral
-    | TemplateStringLiteral
-    | RegularExpressionLiteral
     | numericLiteral
     | bigintLiteral
+    ;
+
+booleanLiteral
+    : TrueLiteral
+    | FalseLiteral
     ;
 
 numericLiteral
@@ -435,7 +368,7 @@ identifierName
 reservedWord
     : keyword
     | NullLiteral
-    | BooleanLiteral
+    | booleanLiteral
     ;
 
 keyword
@@ -446,11 +379,9 @@ keyword
     | Case
     | Else
     | New
-    | Var
     | Catch
     | Finally
     | Return
-    | Void
     | Continue
     | For
     | Switch
@@ -459,33 +390,14 @@ keyword
     | Function
     | This
     | With
-    | Default
     | If
     | Throw
     | Delete
     | In
     | Try
-
-    | Class
-    | Enum
-    | Extends
-    | Super
     | Const
-    | Export
-    | Import
-    | Implements
-    | Let
-    | Private
-    | Public
-    | Interface
-    | Package
-    | Protected
-    | Static
-    | Yield
     | Async
     | Await
-    | From
-    | As
     ;
 
 getter

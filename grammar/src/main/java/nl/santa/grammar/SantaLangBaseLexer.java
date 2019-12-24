@@ -110,7 +110,8 @@ public abstract class SantaLangBaseLexer extends Lexer
         switch (this.lastToken.getType()) {
             case SantaLangLexer.Identifier:
             case SantaLangLexer.NullLiteral:
-            case SantaLangLexer.BooleanLiteral:
+            case SantaLangLexer.TrueLiteral:
+            case SantaLangLexer.FalseLiteral:
             case SantaLangLexer.This:
             case SantaLangLexer.CloseBracket:
             case SantaLangLexer.CloseParen:
