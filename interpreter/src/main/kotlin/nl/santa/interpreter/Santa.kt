@@ -5,7 +5,6 @@ import nl.santa.grammar.SantaLangParser
 import org.antlr.v4.runtime.CharStreams
 import org.antlr.v4.runtime.CommonTokenStream
 import org.graalvm.polyglot.Context
-import org.graalvm.polyglot.Language
 
 fun main(args: Array<String>) {
 
@@ -22,7 +21,7 @@ fun main(args: Array<String>) {
         parser.addErrorListener(ErrorListener)
         parser.buildParseTree = true
 
-//        parser.program()
+        parser.program()
 
         execute(code)
     } catch (e: SantaError) {
@@ -53,7 +52,23 @@ fun parseCode(fileName: String, tokenStream: CommonTokenStream): String {
                 SantaLangLexer.Divide -> "/"
                 SantaLangLexer.Const -> "const"
                 SantaLangLexer.Assign -> "="
+                SantaLangLexer.Function -> "function"
+                SantaLangLexer.For -> "for"
+                SantaLangLexer.Of -> "of"
                 SantaLangLexer.Continue -> "continue"
+                SantaLangLexer.Switch -> "switch"
+                SantaLangLexer.Case -> "case"
+                SantaLangLexer.Default -> "default"
+                SantaLangLexer.Try -> "try"
+                SantaLangLexer.Catch -> "catch"
+                SantaLangLexer.Finally -> "finally"
+                SantaLangLexer.While -> "while"
+                SantaLangLexer.ChristmasIsYou -> "const christmas of you"
+                SantaLangLexer.ConstStil -> "const"
+                SantaLangLexer.With -> "with"
+                SantaLangLexer.Coming -> "process"
+                SantaLangLexer.To -> "if"
+                SantaLangLexer.Town -> "if"
                 else -> tokenStream.LT(i).text.toString()
             })
             .append(" ")
@@ -61,7 +76,8 @@ fun parseCode(fileName: String, tokenStream: CommonTokenStream): String {
         i++
     }
 
-    val arch = listOf("arm", "arm64", "x32", "x64").random()
+//    val arch = listOf("x32", "x64").random()
+    val arch = "x64"
 
     return """
         const __filename = "$fileName";

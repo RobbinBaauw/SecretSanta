@@ -73,16 +73,13 @@ public class SantaLangSyntaxHighlighter extends SyntaxHighlighterBase {
         TextAttributesKey attrKey;
         switch (ttype) {
             case SantaLangLexer.While:
-            case SantaLangLexer.If:
             case SantaLangLexer.Else:
-            case SantaLangLexer.Return:
             case SantaLangLexer.For:
             case SantaLangLexer.Function:
             case SantaLangLexer.Case:
             case SantaLangLexer.Try:
+            case SantaLangLexer.ConstStil:
             case SantaLangLexer.Catch:
-            case SantaLangLexer.TrueLiteral:
-            case SantaLangLexer.FalseLiteral:
             case SantaLangLexer.With:
             case SantaLangLexer.Switch:
             case SantaLangLexer.Async:
@@ -90,10 +87,12 @@ public class SantaLangSyntaxHighlighter extends SyntaxHighlighterBase {
             case SantaLangLexer.Finally:
             case SantaLangLexer.Await:
             case SantaLangLexer.Break:
-            case SantaLangLexer.Throw:
-            case SantaLangLexer.New:
             case SantaLangLexer.Continue:
-            case SantaLangLexer.Const:
+            case SantaLangLexer.Of:
+            case SantaLangLexer.Coming:
+            case SantaLangLexer.To:
+            case SantaLangLexer.Town:
+            case SantaLangLexer.ChristmasIsYou:
                 attrKey = KEYWORD;
                 break;
             case SantaLangLexer.StringLiteral:

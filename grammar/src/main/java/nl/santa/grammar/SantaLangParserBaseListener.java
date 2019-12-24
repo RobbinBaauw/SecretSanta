@@ -198,18 +198,6 @@ public class SantaLangParserBaseListener implements SantaLangParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterForInStatement(SantaLangParser.ForInStatementContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitForInStatement(SantaLangParser.ForInStatementContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterForOfStatement(SantaLangParser.ForOfStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -733,18 +721,6 @@ public class SantaLangParserBaseListener implements SantaLangParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitMetaExpression(SantaLangParser.MetaExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterInExpression(SantaLangParser.InExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitInExpression(SantaLangParser.InExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

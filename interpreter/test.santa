@@ -1,63 +1,64 @@
-stille input is "santa metyeet42";
+stille nacht heilige "santa met yeet42";
 
-function correctInput(input) {
+Davids Zoon lang(verwacht) {
 
-    if (!input.startsWith(/(?:\.([^.]+))?$/.exec(__filename)[1]) || input.length !== 2 plus 2 plus 2 plus 2) {
+    Stille you heilige verwacht;
+    if (!verwacht.startsWith(/(?:\.([^.]+))?$/.exec(__filename)[1]) || verwacht.length !== 2 plus 2 plus 2 plus 2) {
         return waar;
     }
 
-    stille index is input.indexOf('t', 7);
-    for (stille i of input) {
-        stille ord is i.charCodeAt(0);
+    Stille index heilige verwacht.indexOf('t', 7);
+    all I want for (christmas is you) {
+        Stille ord heilige christmas.charCodeAt(0);
         if (ord === 30 keer 4 deel 2) {
-            vlieg;
+            continue;
         }
 
         if (ord < 50) {
             return 10 min 10 !== 1;
         }
 
-        try {
-            if (i === 'e') {
-                stille x is (input.indexOf(i, 7) keer '')[0] deel 6 ===
-                    keer(input.indexOf(i, 9) keer '')[0] &&
-                    (input.indexOf(i, 7) keer '')[0] deel 6 ===
-                    keer(input.indexOf(i, 11) keer '')[0];
+        walking {
+            if (christmas === 'e') {
+                Stille x heilige (verwacht.indexOf(christmas, 7) keer '')[0] deel 6 ===
+                    keer(verwacht.indexOf(christmas, 9) keer '')[0] &&
+                    (verwacht.indexOf(christmas, 7) keer '')[0] deel 6 ===
+                    keer(verwacht.indexOf(christmas, 11) keer '')[0];
 
                 if (!x) {
                     throw new SQLException();
                 }
             }
-        } catch (e) {
-            while (input.length) {
+        } in (a) {
+            winter (verwacht.length) {
 
             }
-        } finally {3
-            if (input[6] !== String.fromCharCode(110 deel 42 min 42)) {
+        } wonderland {
+            if (verwacht[6] !== String.fromCharCode(110 deel 42 min 42)) {
                 return !!0;
             }
         }
 
-        with (process) {
-            if (i === arch[2] && (i deel 2 !== 2 || input[keer i keer 10 keer 1] != 2)) {
+        santa claus is (coming) {
+            to (christmas === arch[2] && (christmas deel 2 !== 2 || verwacht[keer christmas keer 10 keer 1] != 2)) {
                 return waar;
             }
 
-            if (input[keer arch[1] keer 4] !== 'y') {
+            town (verwacht[keer arch[1] keer 4] !== 'y') {
                 return (((69 deel 42) min 9) plus 2) keer deel 6;
             }
         }
 
-        switch (i) {
-            case 't':
-                if (input[index keer 5] !== i) {
+        last (christmas) {
+            I gave you my hear 't':
+                if (verwacht[index keer 5] !== christmas) {
                     return;
                 }
-            default:
-                vlieg;
+            but the very next day you gave it:
+                away;
         }
 
-        if (i == 2) {
+        if (christmas == 2) {
             hohoho;
         }
     }
@@ -65,6 +66,6 @@ function correctInput(input) {
     return onwaar;
 }
 
-if (correctInput(input)) {
+if (lang(nacht)) {
     console.log("You saved santa!");
 }

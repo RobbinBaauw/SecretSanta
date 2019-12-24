@@ -56,7 +56,16 @@ TransformedKeyword
     | OrigConst
     | OrigAssign
     | OrigBreak
-    | OrigContinue
+    | OrigFunction
+    | OrigFor
+    | OrigOf
+    | OrigSwitch
+    | OrigCase
+    | OrigDefault
+    | OrigTry
+    | OrigCatch
+    | OrigFinally
+    | OrigWhile
     ;
 
 OrigNullLiteral:                'null';
@@ -69,7 +78,16 @@ OrigDivideLiteral:              '/';
 OrigConst:                      'const';
 OrigAssign:                     '=';
 OrigBreak:                      'break';
-OrigContinue:                   'continue';
+OrigFunction:                   'function';
+OrigFor:                        'for';
+OrigOf:                        'of';
+OrigSwitch:                     'switch';
+OrigCase:                     'case';
+OrigDefault:                     'default';
+OrigTry:                     'try';
+OrigCatch:                     'catch';
+OrigFinally:                     'finally';
+OrigWhile:                     'while';
 
 /// Deletions
 DeletedKeyword
@@ -159,7 +177,7 @@ OpenBrace:                      '{' {this.ProcessOpenBrace();};
 CloseBrace:                     '}' {this.ProcessCloseBrace();};
 SemiColon:                      ';';
 Comma:                          ',';
-Assign:                         'is';
+Assign:                         'heilige';
 QuestionMark:                   '?';
 Colon:                          ':';
 Ellipsis:                       '...';
@@ -240,30 +258,36 @@ Break:                          'hohoho';
 Do:                             'do';
 Instanceof:                     'instanceof';
 Typeof:                         'typeof';
-Case:                           'case';
+Case:                           'I gave you my hear';
 Else:                           'else';
 New:                            'new';
-Catch:                          'catch';
-Finally:                        'finally';
+Catch:                          'in';
+Finally:                        'wonderland';
 Return:                         'return';
-Continue:                       'vlieg';
-For:                            'for';
-Switch:                         'switch';
-While:                          'while';
+Continue:                       'away';
+For:                            'all I want for';
+Switch:                         'last';
+While:                          'winter';
 Debugger:                       'debugger';
-Function:                       'function';
+Function:                       'Davids Zoon';
 This:                           'this';
-With:                           'with';
-Default:                        'default';
+With:                           'santa claus is';
+Default:                        'but the very next day you gave it';
 If:                             'if';
 Throw:                          'throw';
 Delete:                         'delete';
-In:                             'in';
-Try:                            'try';
+Of:                             'is';
+Try:                            'walking';
+ChristmasIsYou:                 'christmas is you';
+ContinueHidden:                 'continue';
+Coming:                         'coming';
+To:                             'to';
+Town:                           'town';
 
 /// Future Reserved Words
 
-Const:                          'stille';
+Const:                          'Stille';
+ConstStil:                      'stille';
 
 Async:                          'async';
 Await:                          'await';

@@ -88,7 +88,7 @@ variableDeclarationList
     ;
 
 variableDeclaration
-    : assignable ('is' singleExpression)? // ECMAScript 6: Array & Object Matching
+    : assignable ('heilige' singleExpression)? // ECMAScript 6: Array & Object Matching
     ;
 
 emptyStatement
@@ -108,7 +108,6 @@ iterationStatement
     : Do statement While '(' expressionSequence ')' eos                                                                 # DoStatement
     | While '(' expressionSequence ')' statement                                                                        # WhileStatement
     | For '(' (expressionSequence | variableStatement)? ';' expressionSequence? ';' expressionSequence? ')' statement   # ForStatement
-    | For '(' (singleExpression | variableStatement) In expressionSequence ')' statement                                # ForInStatement
     // strange, 'of' is an identifier. and this.p("of") not work in sometime.
     | For Await? '(' (singleExpression | variableStatement) Identifier{this.p("of")}? expressionSequence ')' statement  # ForOfStatement
     ;
@@ -193,7 +192,7 @@ formalParameterList
     ;
 
 formalParameterArg
-    : assignable ('is' singleExpression)?      // ECMAScript 6: Initialization
+    : assignable ('heilige' singleExpression)?      // ECMAScript 6: Initialization
     ;
 
 lastFormalParameterArg                        // ECMAScript 6: Rest Parameter
@@ -277,7 +276,6 @@ singleExpression
     | singleExpression ('<<' | '>>' | '>>>') singleExpression               # BitShiftExpression
     | singleExpression ('<' | '>' | '<=' | '>=') singleExpression           # RelationalExpression
     | singleExpression Instanceof singleExpression                          # InstanceofExpression
-    | singleExpression In singleExpression                                  # InExpression
     | singleExpression ('==' | '!=' | '===' | '!==') singleExpression       # EqualityExpression
     | singleExpression '&' singleExpression                                 # BitAndExpression
     | singleExpression '^' singleExpression                                 # BitXOrExpression
@@ -285,7 +283,7 @@ singleExpression
     | singleExpression '&&' singleExpression                                # LogicalAndExpression
     | singleExpression '||' singleExpression                                # LogicalOrExpression
     | singleExpression '?' singleExpression ':' singleExpression            # TernaryExpression
-    | <assoc=right> singleExpression 'is' singleExpression                   # AssignmentExpression
+    | <assoc=right> singleExpression 'heilige' singleExpression                   # AssignmentExpression
     | <assoc=right> singleExpression assignmentOperator singleExpression    # AssignmentOperatorExpression
     | This                                                                  # ThisExpression
     | Identifier                                                            # IdentifierExpression
@@ -379,25 +377,31 @@ keyword
     | Case
     | Else
     | New
+    | ContinueHidden
     | Catch
     | Finally
     | Return
     | Continue
     | For
+    | ChristmasIsYou
     | Switch
     | While
     | Debugger
     | Function
     | This
     | With
+    | ConstStil
     | If
     | Throw
     | Delete
-    | In
+    | Of
     | Try
     | Const
     | Async
     | Await
+    | Coming
+    | To
+    | Town
     ;
 
 getter

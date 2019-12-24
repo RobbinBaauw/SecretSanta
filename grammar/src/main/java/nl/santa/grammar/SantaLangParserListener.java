@@ -166,18 +166,6 @@ public interface SantaLangParserListener extends ParseTreeListener {
 	 */
 	void exitForStatement(SantaLangParser.ForStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code ForInStatement}
-	 * labeled alternative in {@link SantaLangParser#iterationStatement}.
-	 * @param ctx the parse tree
-	 */
-	void enterForInStatement(SantaLangParser.ForInStatementContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code ForInStatement}
-	 * labeled alternative in {@link SantaLangParser#iterationStatement}.
-	 * @param ctx the parse tree
-	 */
-	void exitForInStatement(SantaLangParser.ForInStatementContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code ForOfStatement}
 	 * labeled alternative in {@link SantaLangParser#iterationStatement}.
 	 * @param ctx the parse tree
@@ -643,18 +631,6 @@ public interface SantaLangParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitMetaExpression(SantaLangParser.MetaExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code InExpression}
-	 * labeled alternative in {@link SantaLangParser#singleExpression}.
-	 * @param ctx the parse tree
-	 */
-	void enterInExpression(SantaLangParser.InExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code InExpression}
-	 * labeled alternative in {@link SantaLangParser#singleExpression}.
-	 * @param ctx the parse tree
-	 */
-	void exitInExpression(SantaLangParser.InExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code LogicalOrExpression}
 	 * labeled alternative in {@link SantaLangParser#singleExpression}.
