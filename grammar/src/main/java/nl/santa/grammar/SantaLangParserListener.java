@@ -166,6 +166,18 @@ public interface SantaLangParserListener extends ParseTreeListener {
 	 */
 	void exitForStatement(SantaLangParser.ForStatementContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code ForChristmasStatement}
+	 * labeled alternative in {@link SantaLangParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterForChristmasStatement(SantaLangParser.ForChristmasStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code ForChristmasStatement}
+	 * labeled alternative in {@link SantaLangParser#iterationStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitForChristmasStatement(SantaLangParser.ForChristmasStatementContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code ForOfStatement}
 	 * labeled alternative in {@link SantaLangParser#iterationStatement}.
 	 * @param ctx the parse tree

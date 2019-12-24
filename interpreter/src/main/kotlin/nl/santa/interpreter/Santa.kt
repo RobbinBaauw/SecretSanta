@@ -25,10 +25,11 @@ fun main(args: Array<String>) {
 
         execute(code)
     } catch (e: SantaError) {
-        System.err.println(e.santaMsg)
+        System.err.println("There is a syntax error!")
+//        System.err.println(e.santaMsg)
     } catch (e: Exception) {
         System.err.println("An error occurred!")
-        System.err.println(e.message)
+//        System.err.println(e.message)
     }
 }
 

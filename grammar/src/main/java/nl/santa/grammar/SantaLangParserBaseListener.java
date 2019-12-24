@@ -198,6 +198,18 @@ public class SantaLangParserBaseListener implements SantaLangParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterForChristmasStatement(SantaLangParser.ForChristmasStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitForChristmasStatement(SantaLangParser.ForChristmasStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterForOfStatement(SantaLangParser.ForOfStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}

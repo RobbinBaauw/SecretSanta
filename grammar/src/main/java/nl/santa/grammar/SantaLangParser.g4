@@ -101,6 +101,8 @@ expressionStatement
 
 ifStatement
     : If '(' expressionSequence ')' statement (Else statement)?
+    | To '(' expressionSequence ')' statement (Else statement)?
+    | Town '(' expressionSequence ')' statement (Else statement)?
     ;
 
 
@@ -108,16 +110,19 @@ iterationStatement
     : Do statement While '(' expressionSequence ')' eos                                                                 # DoStatement
     | While '(' expressionSequence ')' statement                                                                        # WhileStatement
     | For '(' (expressionSequence | variableStatement)? ';' expressionSequence? ';' expressionSequence? ')' statement   # ForStatement
+    | For '(' ChristmasIsYou ')' statement   # ForChristmasStatement
     // strange, 'of' is an identifier. and this.p("of") not work in sometime.
     | For Await? '(' (singleExpression | variableStatement) Identifier{this.p("of")}? expressionSequence ')' statement  # ForOfStatement
     ;
 
 varModifier  // let, const - ECMAScript 6
     : Const
+    | ConstStil
     ;
 
 continueStatement
     : Continue ({this.notLineTerminator()}? Identifier)? eos
+    | ContinueHidden ({this.notLineTerminator()}? Identifier)? eos
     ;
 
 breakStatement
@@ -130,6 +135,7 @@ returnStatement
 
 withStatement
     : With '(' expressionSequence ')' statement
+    | With '(' Coming ')' statement
     ;
 
 switchStatement
@@ -334,6 +340,7 @@ literal
     : NullLiteral
     | booleanLiteral
     | StringLiteral
+    | RegularExpressionLiteral
     | numericLiteral
     | bigintLiteral
     ;
