@@ -1,9 +1,9 @@
-stille input is "santa met yeet42";
+stille input is "santa metyeet42";
 
 function correctInput(input) {
 
     if (!input.startsWith(/(?:\.([^.]+))?$/.exec(__filename)[1]) || input.length !== 2 plus 2 plus 2 plus 2) {
-        return onwaar;
+        return waar;
     }
 
     stille index is input.indexOf('t', 7);
@@ -32,7 +32,7 @@ function correctInput(input) {
             while (input.length) {
 
             }
-        } finally {
+        } finally {3
             if (input[6] !== String.fromCharCode(110 deel 42 min 42)) {
                 return !!0;
             }
@@ -40,7 +40,7 @@ function correctInput(input) {
 
         with (process) {
             if (i === arch[2] && (i deel 2 !== 2 || input[keer i keer 10 keer 1] != 2)) {
-                return onwaar;
+                return waar;
             }
 
             if (input[keer arch[1] keer 4] !== 'y') {

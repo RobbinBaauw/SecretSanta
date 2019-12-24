@@ -35,6 +35,6 @@ public class SantaLangFileType extends LanguageFileType {
 	@Nullable
 	@Override
 	public Icon getIcon() {
-		return Icons.SAMPLE_ICON;
+		return Icons.SANTA_ICON;
 	}
 }

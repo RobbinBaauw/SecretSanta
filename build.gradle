@@ -4,7 +4,7 @@ plugins {
 
 allprojects {
     group "nl.santa"
-    version "1.0-SNAPSHOT"
+    version "25.12.2019"
 
     apply plugin: 'idea'
     apply plugin: 'java'

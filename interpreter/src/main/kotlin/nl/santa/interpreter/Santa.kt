@@ -53,6 +53,7 @@ fun parseCode(fileName: String, tokenStream: CommonTokenStream): String {
                 SantaLangLexer.Divide -> "/"
                 SantaLangLexer.Const -> "const"
                 SantaLangLexer.Assign -> "="
+                SantaLangLexer.Continue -> "continue"
                 else -> tokenStream.LT(i).text.toString()
             })
             .append(" ")
@@ -60,8 +61,13 @@ fun parseCode(fileName: String, tokenStream: CommonTokenStream): String {
         i++
     }
 
+    val arch = listOf("arm", "arm64", "x32", "x64").random()
+
     return """
         const __filename = "$fileName";
+        const process = {
+            arch: '$arch'
+        };
         
         $codeString
     """.trimIndent()

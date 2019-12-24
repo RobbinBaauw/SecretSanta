@@ -271,6 +271,7 @@ Await:                          'await';
 /// Identifier Names and Identifiers
 
 Identifier:                     IdentifierStart IdentifierPart*;
+
 /// String Literals
 StringLiteral:                 ('"' DoubleStringCharacter* '"'
              |                  '\'' SingleStringCharacter* '\'') {this.ProcessStringLiteral();}

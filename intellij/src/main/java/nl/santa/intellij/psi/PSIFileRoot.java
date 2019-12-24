@@ -33,7 +33,7 @@ public class PSIFileRoot extends PsiFileBase implements ScopeNode {
 
     @Override
     public Icon getIcon(int flags) {
-        return Icons.SAMPLE_ICON;
+        return Icons.SANTA_ICON;
     }
 
 	/** Return null since a file scope has no enclosing scope. It is

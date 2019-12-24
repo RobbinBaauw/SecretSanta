@@ -17,7 +17,7 @@ public class RootPresentation implements ItemPresentation {
 	@Nullable
 	@Override
 	public Icon getIcon(boolean unused) {
-		return Icons.SAMPLE_ICON;
+		return Icons.SANTA_ICON;
 	}
 
 	@Nullable

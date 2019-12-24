@@ -17,7 +17,6 @@ public class SantaLangColorSettingsPage implements ColorSettingsPage {
 		new AttributesDescriptor("Keyword", SantaLangSyntaxHighlighter.KEYWORD),
 		new AttributesDescriptor("String", SantaLangSyntaxHighlighter.STRING),
 		new AttributesDescriptor("Line comment", SantaLangSyntaxHighlighter.LINE_COMMENT),
-		new AttributesDescriptor("Block comment", SantaLangSyntaxHighlighter.BLOCK_COMMENT),
 	};
 
 	@Nullable
@@ -29,7 +28,7 @@ public class SantaLangColorSettingsPage implements ColorSettingsPage {
 	@Nullable
 	@Override
 	public Icon getIcon() {
-		return Icons.SAMPLE_ICON;
+		return Icons.SANTA_ICON;
 	}
 
 	@NotNull
