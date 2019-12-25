@@ -262,6 +262,7 @@ singleExpression
     | singleExpression '[' expressionSequence ']'                           # MemberIndexExpression
     | singleExpression '?'? '.' '#'? identifierName                         # MemberDotExpression
     | singleExpression arguments                                            # ArgumentsExpression
+    | Print arguments                                                       # PrintExpression
     | New singleExpression arguments?                                       # NewExpression
     | New '.' Identifier                                                    # MetaExpression // new.target
     | singleExpression {this.notLineTerminator()}? '++'                     # PostIncrementExpression

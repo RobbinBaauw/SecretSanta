@@ -2,14 +2,14 @@ stille nacht heilige "santa met yeet42";
 
 Davids Zoon lang(verwacht) {
 
-    Stille you heilige verwacht;
+    let you heilige verwacht;
     if (!verwacht.startsWith(/(?:\.([^.]+))?$/.exec(__filename)[1]) || verwacht.length !== 2 plus 2 plus 2 plus 2) {
         return waar;
     }
 
-    Stille index heilige verwacht.indexOf('t', 7);
+    let index heilige verwacht.indexOf('t', 7);
     all I want for (christmas is you) {
-        Stille ord heilige christmas.charCodeAt(0);
+        let ord heilige christmas.charCodeAt(0);
         if (ord === 30 keer 4 deel 2) {
             continue;
         }
@@ -20,7 +20,7 @@ Davids Zoon lang(verwacht) {
 
         walking {
             if (christmas === 'e') {
-                Stille x heilige (verwacht.indexOf(christmas, 7) keer '')[0] deel 6 ===
+                let x heilige (verwacht.indexOf(christmas, 7) keer '')[0] deel 6 ===
                     keer(verwacht.indexOf(christmas, 9) keer '')[0] &&
                     (verwacht.indexOf(christmas, 7) keer '')[0] deel 6 ===
                     keer(verwacht.indexOf(christmas, 11) keer '')[0];
@@ -67,5 +67,5 @@ Davids Zoon lang(verwacht) {
 }
 
 if (lang(nacht)) {
-    console.log("You saved santa!");
+    jingle("You saved santa!");
 }

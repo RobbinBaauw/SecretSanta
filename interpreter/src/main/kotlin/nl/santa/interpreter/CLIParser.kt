@@ -10,6 +10,10 @@ fun parseCLI(args: Array<String>): String {
 
     return try {
         parser.parse(args)
+        if (!file.endsWith(".santa")) {
+            System.err.println("Please don't be disrespectful to Santa! Make sure you are using a file with the .santa extension!")
+            exitProcess(0)
+        }
         file
     } catch (e: IllegalStateException) {
         System.err.println(e.message)

@@ -822,6 +822,18 @@ public class SantaLangParserBaseListener implements SantaLangParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterPrintExpression(SantaLangParser.PrintExpressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPrintExpression(SantaLangParser.PrintExpressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterUnaryMinusExpression(SantaLangParser.UnaryMinusExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}

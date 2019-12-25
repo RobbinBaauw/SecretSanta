@@ -728,6 +728,18 @@ public interface SantaLangParserListener extends ParseTreeListener {
 	 */
 	void exitFunctionExpression(SantaLangParser.FunctionExpressionContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code PrintExpression}
+	 * labeled alternative in {@link SantaLangParser#singleExpression}.
+	 * @param ctx the parse tree
+	 */
+	void enterPrintExpression(SantaLangParser.PrintExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code PrintExpression}
+	 * labeled alternative in {@link SantaLangParser#singleExpression}.
+	 * @param ctx the parse tree
+	 */
+	void exitPrintExpression(SantaLangParser.PrintExpressionContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code UnaryMinusExpression}
 	 * labeled alternative in {@link SantaLangParser#singleExpression}.
 	 * @param ctx the parse tree

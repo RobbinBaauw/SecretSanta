@@ -49,7 +49,7 @@ public class SantaLangSyntaxHighlighter extends SyntaxHighlighterBase {
     public static final TextAttributesKey BRACKETS = createTextAttributesKey("SANTA_LANG_LINE_BRACES", DefaultLanguageHighlighterColors.BRACKETS);
     public static final TextAttributesKey PARENTHESES = createTextAttributesKey("SANTA_LANG_LINE_BRACES", DefaultLanguageHighlighterColors.PARENTHESES);
     public static final TextAttributesKey COMMA = createTextAttributesKey("SANTA_LANG_LINE_COMMA", DefaultLanguageHighlighterColors.COMMA);
-    public static final TextAttributesKey CONST = createTextAttributesKey("SANTA_LANG_LINE_CONST", DefaultLanguageHighlighterColors.CONSTANT);
+    public static final TextAttributesKey CONST = createTextAttributesKey("SANTA_LANG_LINE_CONST", DefaultLanguageHighlighterColors.METADATA);
 
     static {
         PSIElementTypeFactory.defineLanguageIElementTypes(SantaLangLanguage.INSTANCE,
@@ -90,6 +90,7 @@ public class SantaLangSyntaxHighlighter extends SyntaxHighlighterBase {
             case SantaLangLexer.Continue:
             case SantaLangLexer.Of:
             case SantaLangLexer.Coming:
+            case SantaLangLexer.Print:
             case SantaLangLexer.To:
             case SantaLangLexer.Town:
             case SantaLangLexer.ChristmasIsYou:
@@ -133,15 +134,21 @@ public class SantaLangSyntaxHighlighter extends SyntaxHighlighterBase {
             case SantaLangLexer.Comma:
                 attrKey = COMMA;
                 break;
+            case SantaLangLexer.Comment:
+                attrKey = LINE_COMMENT;
+                break;
+            case SantaLangLexer.If:
+            case SantaLangLexer.Const:
+            case SantaLangLexer.Return:
+            case SantaLangLexer.ContinueHidden:
+            case SantaLangLexer.TrueLiteral:
+            case SantaLangLexer.FalseLiteral:
             case SantaLangLexer.Assign:
             case SantaLangLexer.Divide:
             case SantaLangLexer.Multiply:
             case SantaLangLexer.Minus:
             case SantaLangLexer.Plus:
-                attrKey = OPERATION;
-                break;
-            case SantaLangLexer.Comment:
-                attrKey = LINE_COMMENT;
+                attrKey = CONST;
                 break;
             default:
                 return EMPTY_KEYS;

@@ -283,10 +283,11 @@ ContinueHidden:                 'continue';
 Coming:                         'coming';
 To:                             'to';
 Town:                           'town';
+Print:                          'jingle';
 
 /// Future Reserved Words
 
-Const:                          'Stille';
+Const:                          'let';
 ConstStil:                      'stille';
 
 Async:                          'async';
