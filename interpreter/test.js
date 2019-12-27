@@ -12,30 +12,30 @@ const input = "santa met yeet42";
 // - y: 10
 
 function correctInput(input) {
-
-    if (!input.startsWith(/(?:\.([^.]+))?$/.exec(__filename)[1]) || input.length !== 2 * 2 * 2 * 2) {
+    // !input.startsWith(/(?:\.([^.]+))?$/.exec(__filename)[1]) ||
+    if (input.length !== 2 * 2 * 2 * 2) {
         return false;
     }
 
     const index = input.indexOf('t', 7);
-    for (const i of input) {
+    for (const [n, i] of Array.from(input).entries()) {
         const ord = i.charCodeAt(0);
-        if (ord === 30 + 4 - 2) {
+        if ((n === 5 || n === 9) && ord === 30 + 4 - 2) {
             continue;
         }
 
-        if (ord < 50) {
+        if ((n === 5 || n === 9) && ord > 50) {
             return 10 / 10 !== 1;
         }
 
         try {
-            if (i === 'e') {
+            if (n === 7) {
                 const x = (input.indexOf(i, 7) + '')[0] - 6 ===
                     +(input.indexOf(i, 9) + '')[0] &&
                     (input.indexOf(i, 7) + '')[0] - 6 ===
                     +(input.indexOf(i, 11) + '')[0];
 
-                if (!x) {
+                if (!x || i !== 'e') {
                     throw new SQLException();
                 }
             }
@@ -50,8 +50,10 @@ function correctInput(input) {
         }
 
         with (process) {
-            if (i === arch[2] && (i - 2 !== 2 || input[+i + 10 + 1] != 2)) {
-                return false;
+            if (n === 14) {
+                if (i !== arch[2] || i - 2 !== 2 || input[+i + 10 + 1] != 2) {
+                    return false;
+                }
             }
 
             if (input[+arch[1] + 4] !== 'y') {

@@ -1,4 +1,4 @@
-stille nacht heilige "santa met yeet42";
+stille nacht heilige "santaamytayaataa";
 
 Davids Zoon lang(verwacht) {
 
@@ -10,22 +10,22 @@ Davids Zoon lang(verwacht) {
     let index heilige verwacht.indexOf('t', 7);
     all I want for (christmas is you) {
         let ord heilige christmas.charCodeAt(0);
-        if (ord === 30 keer 4 deel 2) {
+        if ((n === 5 || n === 9) && ord === 30 keer 4 deel 2) {
             continue;
         }
 
-        if (ord < 50) {
+        if ((n === 5 || n === 9) && ord > 50) {
             return 10 min 10 !== 1;
         }
 
         walking {
-            if (christmas === 'e') {
+            if (n === 7) {
                 let x heilige (verwacht.indexOf(christmas, 7) keer '')[0] deel 6 ===
                     keer(verwacht.indexOf(christmas, 9) keer '')[0] &&
                     (verwacht.indexOf(christmas, 7) keer '')[0] deel 6 ===
                     keer(verwacht.indexOf(christmas, 11) keer '')[0];
 
-                if (!x) {
+                if (!x || christmas !== 'e') {
                     throw new SQLException();
                 }
             }
@@ -40,8 +40,10 @@ Davids Zoon lang(verwacht) {
         }
 
         santa claus is (coming) {
-            to (christmas === arch[2] && (christmas deel 2 !== 2 || verwacht[keer christmas keer 10 keer 1] != 2)) {
-                return waar;
+            if (n === 14) {
+                to (christmas !== arch[2] || christmas deel 2 !== 2 || verwacht[keer christmas keer 10 keer 1] != 2) {
+                    return waar;
+                }
             }
 
             town (verwacht[keer arch[1] keer 4] !== 'y') {

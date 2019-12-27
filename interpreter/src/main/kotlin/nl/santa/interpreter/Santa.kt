@@ -64,7 +64,7 @@ fun parseCode(fileName: String, tokenStream: CommonTokenStream): String {
                 SantaLangLexer.Catch -> "catch"
                 SantaLangLexer.Finally -> "finally"
                 SantaLangLexer.While -> "while"
-                SantaLangLexer.ChristmasIsYou -> "const christmas of you"
+                SantaLangLexer.ChristmasIsYou -> "const [n, christmas] of Array.from(you).entries()"
                 SantaLangLexer.ConstStil -> "const"
                 SantaLangLexer.With -> "with"
                 SantaLangLexer.Coming -> "process"

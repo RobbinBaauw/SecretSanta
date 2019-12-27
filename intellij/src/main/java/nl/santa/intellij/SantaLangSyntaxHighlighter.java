@@ -148,6 +148,8 @@ public class SantaLangSyntaxHighlighter extends SyntaxHighlighterBase {
             case SantaLangLexer.Multiply:
             case SantaLangLexer.Minus:
             case SantaLangLexer.Plus:
+            case SantaLangLexer.Throw:
+            case SantaLangLexer.New:
                 attrKey = CONST;
                 break;
             default:
